@@ -15,7 +15,7 @@
                 <form action="<?php echo base_url("new_product/save"); ?>" method="post" enctype="multipart/form-data">
                     <div class="form-group">
 
-                        <label>Ürünün Adı</label>
+                        <label>Tema Adı</label>
                         <input  class="form-control" id="exampleInputEmail1" placeholder="" name="title">
                         <?php if (isset($form_error)) { ?>
                             <small class="input-form-error" style="font-size:10pt; color:red; font-family:sans-serif, Verdana; font-style: italic"; >
@@ -49,17 +49,19 @@
 
                     </div>
 
-                    <div class="form-group">
 
-                        <label>Tema kategori</label>
-                        <input  class="form-control" id="exampleInputEmail1" placeholder="" name="tema_kategori">
-                        <?php if (isset($form_error)) { ?>
-                            <small class="input-form-error" style="font-size:10pt; color:red; font-family:sans-serif, Verdana; font-style: italic"; >
-                                <?php echo form_error("tema_kategori"); ?>
-                            </small>
-                        <?php } ?>
-
-                    </div>
+                    <div class="form-group ">
+                        <label for="control-demo-6" class="col-sm-3">Tema Kategori</label>
+                        <div id="control-demo-6" class="">
+                            <select class="form-control" name="tema_kategori">
+                                <option>HTML</option>
+                                <option>CSS</option>
+                                <option>Javascript</option>
+                                <option>Bootstrap</option>
+                                <option>WordPress</option>
+                            </select>
+                        </div>
+                    </div><!-- .form-group -->
 
 
                     <button type="submit" class="btn btn-primary btn-md btn-outline">Kaydet</button>

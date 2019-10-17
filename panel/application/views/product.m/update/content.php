@@ -47,17 +47,20 @@
 
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group ">
+                        <label for="control-demo-6" class="col-sm-3">Tema Kategori</label>
+                        <div id="control-demo-6" class="">
+                            <select class="form-control" name="tema_kategori">
+                                <option>HTML</option>
+                                <option>CSS</option>
+                                <option>Javascript</option>
+                                <option>Bootstrap</option>
+                                <option>WordPress</option>
+                            </select>
+                        </div>
+                    </div><!-- .form-group -->
 
-                        <label>Tema Kategori</label>
-                        <input  class="form-control" placeholder="" name="tema_kategori" value="<?php echo $item->tema_kategori ?>">
-                        <?php if (isset($form_error)) { ?>
-                            <small class="input-form-error" style="font-size:15pt; color:red; font-family: Verdana" >
-                                <?php echo form_error("tema_kategori"); ?>
-                            </small>
-                        <?php } ?>
 
-                    </div>
 
 
                     <button type="submit" class="btn btn-primary btn-md btn-outline">Güncelle</button>
