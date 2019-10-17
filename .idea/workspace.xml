@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4d178f20-ee46-4046-955e-e899c43e7f8d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/application/views/product.m/add/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/product.m/add/content.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/application/views/product.m/list/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/product.m/list/content.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/application/views/product.m/update/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/product.m/update/content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/controllers/new_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/controllers/new_product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/views/product.m/image/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/product.m/image/content.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,12 +25,13 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/panel/application/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/panel/application/models" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\falay\panel\application\models" />
       <recent name="C:\xampp\htdocs\falay\panel\application\views" />
     </key>
   </component>
@@ -59,7 +59,7 @@
       <updated>1571266661391</updated>
       <workItem from="1571266662557" duration="3138000" />
       <workItem from="1571270690595" duration="2000" />
-      <workItem from="1571314783290" duration="16357000" />
+      <workItem from="1571314783290" duration="18169000" />
     </task>
     <servers />
   </component>

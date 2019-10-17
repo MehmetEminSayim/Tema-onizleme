@@ -212,6 +212,77 @@ class new_product extends CI_Controller
 
     }
 
+    public function image_form($id){
+
+        $viewData =new stdClass();
+        /** viev e gönderilecek verilerin set edilmesi */
+        $viewData->viewFolder= $this->viewFolder;
+        $viewData->subViewFolder="image";
+
+        $viewData->item=$this->product_model->get(
+            array(
+                "id"  => $id
+            )
+
+        );
+        $viewData->item_images = $this->product_image_model->get_all(
+            array(
+                "tema_id" => $id
+            )
+        );
+
+        $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index",$viewData);
+
+    }
+
+    public  function image_upload($id){
+
+        $file_name = convertToSEO(pathinfo($_FILES["file"]["name"], PATHINFO_FILENAME)) . "." . pathinfo($_FILES["file"]["name"], PATHINFO_EXTENSION);
+
+        $config["allowed_types"] = "jpg|jpeg|png";
+        $config["upload_path"]  = "uploads";
+        $config["file_name"] = $file_name;
+
+        $this->load->library("upload" ,$config);
+
+        $upload= $this->upload->do_upload("file");
+
+        if ($upload){
+
+            $uploaded_file=$this->upload->data("file_name");
+            $this->product_image_model->add(
+                array(
+                    "img_url" => $uploaded_file,
+                    "tema_id" => $id
+
+                )
+            );
+
+        }else{
+            echo "işlem başarısız";
+        }
+    }
+
+    public function refresh_image_list($id){
+
+        $viewData = new stdClass();
+
+        /** View'e gönderilecek Değişkenlerin Set Edilmesi.. */
+        $viewData->viewFolder = $this->viewFolder;
+        $viewData->subViewFolder = "image";
+
+        $viewData->item_images = $this->product_image_model->get_all(
+            array(
+                "tema_id"    => $id
+            )
+        );
+
+        $render_html = $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/render_element/image_list", $viewData, true);
+
+        echo $render_html;
+
+    }
+
 
 
 
