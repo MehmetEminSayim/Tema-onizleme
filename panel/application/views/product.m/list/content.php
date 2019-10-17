@@ -17,13 +17,15 @@
             </div>
             <?php } else {?>
 
-            <table class="table table-hover content-container table-bordered ">
+            <table class="table table-hover content-container ">
              <thead>
 
                 <th><i class="fa fa-reorder"></i></th>
                 <th>#id</th>
                 <th>Başlık</th>
+                <th>Url</th>
                 <th>Fiyat</th>
+                <th>Kategori</th>
 
 
 
@@ -38,6 +40,7 @@
                         <td> <?php echo $item->title; ?></td>
                         <td> <?php echo $item->url; ?></td>
                         <td><?php echo $item->tema_fiyat; ?></td>
+                        <td><?php echo $item->tema_kategori; ?></td>
 
 
                         <td>
