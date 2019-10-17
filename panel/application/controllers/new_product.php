@@ -92,5 +92,33 @@ class new_product extends CI_Controller
 
     }
 
+    public function delete($id){
+
+
+        $this->basic_model->delete('products','id',$id);
+
+        if ($delete){
+
+            $alert = array(
+                "text" =>"Kayıt başarılı bir şekilde silidi.",
+                "type" =>"success"
+            );
+
+        }
+        else{
+
+            $alert = array(
+                "text" =>"Kayıt silinemedi.",
+                "type" =>"error"
+            );
+
+        }
+
+        $this->session->set_flashData("alert",$alert);
+        redirect(base_url("new_product"));
+    }
+
+
+
 }
 

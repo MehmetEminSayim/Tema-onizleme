@@ -25,6 +25,7 @@ class Basic_Model extends CI_Model
         $this->db->delete($tablo);
     }
 
+
     public function getTable($table,$where = array(),$row = false){
         $this->db->select('*');
         $this->db->from($table);

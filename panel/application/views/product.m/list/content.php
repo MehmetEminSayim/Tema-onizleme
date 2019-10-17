@@ -44,11 +44,8 @@
 
 
                         <td>
-                            <button
-                                    data-url="<?php echo base_url("new_product/delete/$item->id")?>"
-                                    class="btn btn-sn btn danger tikla-btn ">
-                                    <i class="fa fa-close"></i> Sil
-                                </button>
+
+                            <a href="<?php echo base_url("new_product/delete/$item->id")?>" class="btn btn-sn btn warning "><i class="fa fa-pencil-square-o"></i> Sil</a>
                             <a href="<?php echo base_url("new_product/update_form/$item->id")?>" class="btn btn-sn btn warning "><i class="fa fa-pencil-square-o"></i> Düzenle</a>
                             <a href="<?php echo base_url("new_product/image_form/$item->id")?>" class="btn btn-sn btn dark "><i class="fa fa-image"></i> Resimler</a>
 
