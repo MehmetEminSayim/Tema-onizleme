@@ -118,6 +118,104 @@ class new_product extends CI_Controller
         redirect(base_url("new_product"));
     }
 
+    public function update_form($id){
+        $viewData =new stdClass();
+        /** Tablodan veri çekme  */
+        $item=$this->product_model->get(
+            array(
+                "id"  => $id
+            )
+        );
+
+        /** viev e gönderilecek verilerin set edilmesi */
+        $viewData->viewFolder= $this->viewFolder;
+        $viewData->subViewFolder="update";
+        $viewData->item= $item;
+
+
+        $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index",$viewData);
+    }
+
+    public  function  update($id){
+
+        $this->load->library("form_validation");
+
+        //Kurallar yazılır...
+        $this->form_validation->set_rules("title","Adı","required|trim");
+
+        $this->form_validation->set_message(
+        /** bu kaydı bulduğunda alttaki bilgiler ile değiştir */
+
+            array(
+                "required" => "{field} alanı boş bırakılamaz."
+            )
+        );
+
+        //Form validation çalıştırılır...
+        $validate=$this->form_validation->run();
+        if ($validate)
+        {
+            $update = $this->product_model->update(
+                array(
+                    "id"  => $id
+                ),
+                array(
+                    "title"         => $this->input->post("title"),
+                    "url"           => $this->input->post("url"),
+                    "tema_fiyat"   => $this->input->post("tema_fiyat"),
+                    "tema_kategori"   => $this->input->post("tema_kategori"),
+                   )
+            );
+            if ($update){
+
+                $alert = array(
+                    "text" =>"Güncelleme İşlemi Başarılıdır.",
+                    "type" =>"success"
+                );
+
+            }
+            else{
+
+                $alert = array(
+                    "text" =>"Güncelleme İşlemi Başarılıdır.",
+                    "type" =>"error"
+                );
+
+            }
+
+            $this->session->set_flashData("alert",$alert);
+            redirect(base_url("new_product"));
+
+        }else{
+
+            $viewData =new stdClass();
+            /** Tablodan veri çekme  */
+            $item=$this->product_model->get(
+                array(
+                    "id"  => $id
+                )
+            );
+
+
+            /** viev e gönderilecek verilerin set edilmesi */
+            $viewData->viewFolder= $this->viewFolder;
+            $viewData->subViewFolder="update";
+            $viewData->form_error=true;
+            $viewData->item = $item;
+
+
+            $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index",$viewData);
+        }
+
+        //Başarılı ise >- kayıt başlar...
+        //Başarısız ise->hata gösterilir...
+
+    }
+
+
+
+
+
 
 
 }
