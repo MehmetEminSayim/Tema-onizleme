@@ -4,7 +4,7 @@
     <list default="true" id="4d178f20-ee46-4046-955e-e899c43e7f8d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/panel/application/controllers/new_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/controllers/new_product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/application/views/product.m/image/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/product.m/image/content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/views/product.m/image/render_element/image_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/product.m/image/render_element/image_list.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +59,8 @@
       <updated>1571266661391</updated>
       <workItem from="1571266662557" duration="3138000" />
       <workItem from="1571270690595" duration="2000" />
-      <workItem from="1571314783290" duration="18169000" />
+      <workItem from="1571314783290" duration="18743000" />
+      <workItem from="1571400196838" duration="1060000" />
     </task>
     <servers />
   </component>
@@ -71,7 +72,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
