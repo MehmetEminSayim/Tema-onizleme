@@ -42,7 +42,7 @@ class new_product extends CI_Controller
         $this->load->library("form_validation");
 
         //Kurallar yazılır...
-        $this->form_validation->set_rules("title","urunadı","required|trim");
+        $this->form_validation->set_rules("title","temaadı","required|trim");
 
         $this->form_validation->set_message(
             array(

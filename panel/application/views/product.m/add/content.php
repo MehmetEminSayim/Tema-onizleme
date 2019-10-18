@@ -1,6 +1,6 @@
 <div class="col-md-12">
     <h4 class="m-b-lg">
-        Yeni Ürün Ekle
+        Yeni Tema Ekle
         <a href="#" class="btn pull-right btn-primary btn-sm"><i class="fa fa-plus"></i> Yeni Ekle</a>
     </h4>
 </div>

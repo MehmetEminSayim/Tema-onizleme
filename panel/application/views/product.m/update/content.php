@@ -11,8 +11,8 @@
             <div class="widget-body">
 
                 <form action="<?php echo base_url("new_product/update/$item->id"); ?>" method="post">
-                    <div class="form-group">
 
+                    <div class="form-group">
                         <label>Tema Adı</label>
                         <input  class="form-control" placeholder="" name="title" value="<?php echo $item->title ?>">
                         <?php if (isset($form_error)) { ?>
@@ -24,7 +24,6 @@
                     </div>
 
                     <div class="form-group">
-
                         <label>Url</label>
                         <input  class="form-control" placeholder="" name="url" value="<?php echo $item->url ?>">
                         <?php if (isset($form_error)) { ?>
