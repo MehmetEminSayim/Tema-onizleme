@@ -47,17 +47,6 @@
 
                     </div>
 
-                    <div class="form-group">
-
-                        <label>Şifre</label>
-                        <input required class="form-control" name="pasword" value="<?php echo $item->pasword ?>">
-                        <?php if (isset($form_error)) { ?>
-                            <small class="input-form-error" style="font-size:10pt; color:red; font-family:sans-serif, Verdana; font-style: italic"; >
-                                <?php echo form_error("pasword"); ?>
-                            </small>
-                        <?php } ?>
-
-                    </div>
 
 
 

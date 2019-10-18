@@ -17,6 +17,9 @@
 <script src="<?php echo base_url("assest"); ?>/assets/js/fullcalendar.js"></script>
 
 
+<?php if (isset($jsSet)) {
+    echo $jsSet;
+}?>
 
 <?php $this->load->view("inculudes/alert"); ?>
 

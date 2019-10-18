@@ -41,8 +41,9 @@
 
                             <td>
 
-                                <a href="<?php echo base_url("users/delete/$item->id")?>" class="btn btn-sn btn warning "><i class="fa fa-pencil-square-o"></i> Sil</a>
+                                <a href="<?php echo base_url("users/delete/$item->id")?>" class="btn btn-sn btn danger "><i class="fa fa-pencil-square-o"></i> Sil</a>
                                 <a href="<?php echo base_url("users/update_form/$item->id")?>" class="btn btn-sn btn warning "><i class="fa fa-pencil-square-o"></i> Düzenle</a>
+                                <a href="<?php echo base_url("users/update_pasword_form/$item->id")?>" class="btn btn-sn btn purple "><i class="fa fa-key"></i>Şifre Değiştir</a>
 
                             </td>
 

@@ -32,6 +32,7 @@ class users extends CI_Controller
         $viewData->viewFolder = $this->viewFolder;
         $viewData->subViewFolder = "add";
         $viewData->title = "Yeni Kullanıcı";
+        $viewData->jsSet = '<script src="'.base_url().'assest/assets/js/passwordmatch.js"></script>';
 
 
         $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
@@ -62,6 +63,26 @@ class users extends CI_Controller
         $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
     }
 
+    public function update_pasword_form($id)
+    {
+        $viewData = new stdClass();
+        /** Tablodan veri çekme  */
+        $item = $this->users_model->get(
+            array(
+                "id" => $id
+            )
+        );
+
+        /** viev e gönderilecek verilerin set edilmesi */
+        $viewData->viewFolder = $this->viewFolder;
+        $viewData->subViewFolder = "pasword";
+        $viewData->item = $item;
+        $viewData->jsSet = '<script src="'.base_url().'assest/assets/js/passwordmatch.js"></script>';
+
+
+        $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
+    }
+
     public function update($id)
     {
 
@@ -82,6 +103,23 @@ class users extends CI_Controller
 
     }
 
+    public function update_pasword($id)
+    {
+
+        $update = $this->users_model->update(
+            array(
+                "id" => $id
+            ),
+            array(
+                "pasword" => $this->input->post("pasword"),
+                "re_pasword" => $this->input->post("re_pasword"),
+            )
+        );
+
+        $this->session->set_flashData("alert", $alert);
+        redirect(base_url("users"));
+
+    }
 
     public function delete($id){
 

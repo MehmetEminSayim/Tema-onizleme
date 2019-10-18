@@ -53,17 +53,30 @@
                     <div class="form-group">
 
                         <label>Şifre</label>
-                        <input required class="form-control" name="pasword">
+                        <input required class="form-control" id="pass1" name="pasword">
                         <?php if (isset($form_error)) { ?>
                             <small class="input-form-error" style="font-size:10pt; color:red; font-family:sans-serif, Verdana; font-style: italic"; >
                                 <?php echo form_error("pasword"); ?>
+                            </small>
+                        <?php } ?>
+                        <span  class="help-block text-danger sifre-uyari">Şifreler Uyuşmuyor</span>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Şifre Tekrar</label>
+                        <input required class="form-control" id="pass2" name="re_pasword">
+                        <?php if (isset($form_error)) { ?>
+                            <small class="input-form-error" style="font-size:10pt; color:red; font-family:sans-serif, Verdana; font-style: italic"; >
+                                <?php echo form_error("re_pasword"); ?>
                             </small>
                         <?php } ?>
 
                     </div>
 
 
-                    <button type="submit" class="btn btn-primary btn-md btn-outline">Kaydet</button>
+                    <button type="submit" id="kaydet" class="btn btn-primary btn-md btn-outline">Kaydet</button>
                     <a href="<?php echo base_url("users"); ?>" class="btn btn-md btn danger ">İptal</a>
                 </form>
             </div>
@@ -71,3 +84,4 @@
 
     </div>
 </div>
+

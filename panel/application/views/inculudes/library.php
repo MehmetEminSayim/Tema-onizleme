@@ -84,8 +84,9 @@
             "<?php echo  base_url("assest"); ?>/libs/bower/switchery/dist/switchery.min.js",
             "<?php echo  base_url("assest"); ?>/libs/bower/lightbox2/dist/css/lightbox.min.css",
             "<?php echo  base_url("assest"); ?>/libs/bower/lightbox2/dist/js/lightbox.min.js",
-            "<?php echo  base_url("assest"); ?>/assets/js/custom.js"
-        ]
+            "<?php echo  base_url("assest"); ?>/assets/js/custom.js",
+            "<?php echo  base_url("assest"); ?>/js/passwordmatch.js"
+        ],
     };
 </script>
 

@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4d178f20-ee46-4046-955e-e899c43e7f8d" name="Default Changelist" comment="" />
+    <list default="true" id="4d178f20-ee46-4046-955e-e899c43e7f8d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/panel/application/views/users.m/pasword/content.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/panel/application/views/users.m/pasword/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/panel/application/views/users.m/pasword/page_script.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/config/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/config/autoload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/controllers/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/controllers/users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/helpers/tools_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/helpers/tools_helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/views/inculudes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/inculudes/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/views/inculudes/inculude_script.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/inculudes/inculude_script.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/views/inculudes/library.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/inculudes/library.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/views/users.m/add/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/users.m/add/content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/views/users.m/list/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/users.m/list/content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/views/users.m/update/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/users.m/update/content.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +27,13 @@
       <executable />
     </execution>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -21,12 +42,13 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/panel/application/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/panel/application/views/users.m" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\falay\panel\application\views\users.m" />
       <recent name="C:\xampp\htdocs\falay\panel\application\views" />
       <recent name="C:\xampp\htdocs\falay\panel\application\models" />
       <recent name="C:\xampp\htdocs\falay\panel\application\controllers" />
@@ -58,6 +80,7 @@
       <workItem from="1571270690595" duration="2000" />
       <workItem from="1571314783290" duration="18743000" />
       <workItem from="1571400196838" duration="7777000" />
+      <workItem from="1571434877356" duration="3904000" />
     </task>
     <servers />
   </component>
