@@ -21,4 +21,29 @@ class userop extends CI_Controller{
         $this->load->view("{$viewDate->viewFolder}/{$viewDate->subViewFolder}/index.php", $viewDate);
 
     }
+    public function do_login(){
+
+        $mail = $this->input->post('user_email');
+        $password = md5($this->input->post('user_pasword'));
+
+       if ($this->basic_model->getTable('users',['email' => $mail],true)){
+
+           if($this->basic_model->getTable('users',['email' => $mail,'pasword' => $password],true)){
+                $oturum = $this->basic_model->getTable('users',['email' => $mail,'pasword' => $password],true);
+                $sessionData = json_decode(json_encode($oturum), true);
+                $sessionData['is_login'] = 1;
+                $this->session->set_userdata($sessionData);
+               redirect(base_url('welcome'));
+           }
+
+           else{
+               $this->session->set_flashdata('login', 'pass_error');
+                redirect(base_url('login'));
+           }
+
+       }else{
+           $this->session->set_flashdata('login', 'mail_error');
+           redirect(base_url('login'));
+       }
+    }
 }

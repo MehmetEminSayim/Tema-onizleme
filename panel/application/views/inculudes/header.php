@@ -5,11 +5,9 @@
 <meta name="description" content="Admin, Dashboard, Bootstrap" />
 <link rel="shortcut icon" sizes="196x196" href="<?php echo base_url("assest"); ?>/assets/images/logo.png">
 <title>
-    <?php if(isset($title)):?>
-        <?php echo $title?>
-    <?php else: ?>
+
             CMS Yönetim Sistemi
-    <?php endif; ?>
+
 </title>
 
 <?php $this->load->view("inculudes/inculudes_style"); ?>
