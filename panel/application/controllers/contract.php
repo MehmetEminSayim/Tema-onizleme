@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class users extends CI_Controller
+class contract extends CI_Controller
 {
 
     public $viewFolder = "";
@@ -9,8 +9,8 @@ class users extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->viewFolder = "users.m";
-        $this->load->model("users_model");
+        $this->viewFolder = "contract.m";
+        $this->load->model("contract_model");
         $this->load->model("basic_model");
     }
 
@@ -31,24 +31,33 @@ class users extends CI_Controller
         /** viev e gönderilecek verilerin set edilmesi */
         $viewData->viewFolder = $this->viewFolder;
         $viewData->subViewFolder = "add";
-        $viewData->title = "Yeni Kullanıcı";
-        $viewData->jsSet = '<script src="'.base_url().'assest/assets/js/passwordmatch.js"></script>';
+        $viewData->title = "Yeni Sözleşme";
+
 
 
         $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
     }
 
-    public function save()
-    {
-        $this->basic_model->insert('users', $_POST);
-        redirect(base_url('users'));
+
+    public  function  save(){
+
+            $this->contract_model->add(
+                array(
+                    "contract_name"         => $this->input->post("contract_name"),
+                    "contract_description"   => $this->input->post("contract_description"),
+                )
+            );
+
+            $this->session->set_flashData("alert",$alert);
+            redirect(base_url("contract"));
+
     }
 
     public function update_form($id)
     {
         $viewData = new stdClass();
         /** Tablodan veri çekme  */
-        $item = $this->users_model->get(
+        $item = $this->contract_model->get(
             array(
                 "id" => $id
             )
@@ -63,68 +72,30 @@ class users extends CI_Controller
         $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
     }
 
-    public function update_pasword_form($id)
-    {
-        $viewData = new stdClass();
-        /** Tablodan veri çekme  */
-        $item = $this->users_model->get(
-            array(
-                "id" => $id
-            )
-        );
-
-        /** viev e gönderilecek verilerin set edilmesi */
-        $viewData->viewFolder = $this->viewFolder;
-        $viewData->subViewFolder = "pasword";
-        $viewData->item = $item;
-        $viewData->jsSet = '<script src="'.base_url().'assest/assets/js/passwordmatch.js"></script>';
-
-
-        $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
-    }
-
     public function update($id)
     {
 
-        $update = $this->users_model->update(
+        $update = $this->contract_model->update(
             array(
                 "id" => $id
             ),
             array(
-                "user_name" => $this->input->post("user_name"),
-                "full_name" => $this->input->post("full_name"),
-                "email" => $this->input->post("email"),
-                "pasword" => md5($this->input->post("pasword")),
+
+                "contract_name"          => $this->input->post("contract_name"),
+                "contract_description"   => $this->input->post("contract_description"),
+
 
             )
         );
 
         $this->session->set_flashData("alert", $alert);
-        redirect(base_url("users"));
-
-    }
-
-    public function update_pasword($id)
-    {
-
-        $update = $this->users_model->update(
-            array(
-                "id" => $id
-            ),
-            array(
-                "pasword" => $this->input->post("pasword"),
-
-            )
-        );
-
-        $this->session->set_flashData("alert", $alert);
-        redirect(base_url("users"));
+        redirect(base_url("contract"));
 
     }
 
     public function delete($id){
 
-        $delete =$this->users_model->delete(
+        $delete =$this->contract_model->delete(
             array(
                 "id" => $id
 
@@ -148,7 +119,7 @@ class users extends CI_Controller
         }
 
         $this->session->set_flashData("alert",$alert);
-        redirect(base_url("users"));
+        redirect(base_url("contract"));
     }
 
     public function isActiveSetter($id){
@@ -157,7 +128,7 @@ class users extends CI_Controller
         if ($id){
             $aktifmi =($this->input->post("data") ==="true") ? 1 : 0;
 
-            $this->users_model->update(
+            $this->contract_model->update(
                 array(
                     "id" => $id
                 ),

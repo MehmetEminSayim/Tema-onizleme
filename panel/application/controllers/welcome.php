@@ -13,6 +13,7 @@ class welcome extends CI_Controller {
 
     public function index()
     {
+
         $viewDate=new stdClass();
         $viewDate->viewFolder=$this->viewFolder;
         $viewDate->subViewFolder="list";

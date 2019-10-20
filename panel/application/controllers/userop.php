@@ -24,7 +24,7 @@ class userop extends CI_Controller{
     public function do_login(){
 
         $mail = $this->input->post('user_email');
-        $password = md5($this->input->post('user_pasword'));
+        $password = $this->input->post('user_pasword');
 
        if ($this->basic_model->getTable('users',['email' => $mail],true)){
 
@@ -45,5 +45,11 @@ class userop extends CI_Controller{
            $this->session->set_flashdata('login', 'mail_error');
            redirect(base_url('login'));
        }
+    }
+
+    public function logout(){
+        $this->session->sess_destroy();
+        $this->session->set_flashdata('login', 'logout');
+        redirect(base_url('login'));
     }
 }
