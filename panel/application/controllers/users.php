@@ -103,6 +103,7 @@ class users extends CI_Controller
         redirect(base_url("users"));
 
     }
+   
 
     public function update_pasword($id)
     {
@@ -112,7 +113,7 @@ class users extends CI_Controller
                 "id" => $id
             ),
             array(
-                "pasword" => $this->input->post("pasword"),
+                "pasword" => md5($this->input->post("pasword")),
 
             )
         );

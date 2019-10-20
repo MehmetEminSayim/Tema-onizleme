@@ -14,9 +14,7 @@ class userop extends CI_Controller{
     }
     public  function login(){
 
-        if ( $sessionData['is_login'] = 1){
-            redirect(base_url());
-        }
+        
 
         $viewDate = new stdClass();
         $viewDate->viewFolder = $this->viewFolder;
