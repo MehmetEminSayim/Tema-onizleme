@@ -7,14 +7,26 @@
     </div><!-- logo -->
     <?php if ($this->session->flashdata('login') == 'mail_error'):?>
         <div class="alert alert-danger" role="alert">
-            <strong>Hata! </strong>
-            <span>Böyle bir mial yok.</span>
-            <a href="#" class="alert-link">alert link</a>
+            <strong>Hata..! </strong>
+            <span>Böyle bir mail yok. Lütfen Mail'inizi Kontrol Ediniz</span>
+            <a href="#" class="alert-link"></a>
         </div>
     <?php elseif ($this->session->flashdata('login') == 'pass_error'):?>
         <div class="alert alert-danger" role="alert">
-            <strong>Oh snap! </strong>
-            <span>şifren yanlış.</span>
+            <strong>Hata..! </strong>
+            <span>Şifren yanlış.</span>
+            <a href="#" class="alert-link">alert link</a>
+        </div>
+    <?php elseif ($this->session->flashdata('login') == 'uath_error'):?>
+        <div class="alert alert-danger" role="alert">
+            <strong>Hata..! </strong>
+            <span>Giriş yapmak için oturumunuzu başlatın.</span>
+            <a href="#" class="alert-link">alert link</a>
+        </div>
+    <?php elseif ($this->session->flashdata('login') == 'logout'):?>
+        <div class="alert alert-success " role="alert">
+            <strong>Başarılı! </strong>
+            <span>Oturum sonladırıldı.</span>
             <a href="#" class="alert-link">alert link</a>
         </div>
     <?php endif;?>

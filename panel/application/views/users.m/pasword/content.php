@@ -27,10 +27,10 @@
                     <div class="form-group">
 
                         <label>Şifre Tekrar</label>
-                        <input required class="form-control" id="pass2" name="re_pasword">
+                        <input required class="form-control" id="pass2" name="">
                         <?php if (isset($form_error)) { ?>
                             <small class="input-form-error" style="font-size:10pt; color:red; font-family:sans-serif, Verdana; font-style: italic"; >
-                                <?php echo form_error("re_pasword"); ?>
+                                <?php echo form_error(""); ?>
                             </small>
                         <?php } ?>
 

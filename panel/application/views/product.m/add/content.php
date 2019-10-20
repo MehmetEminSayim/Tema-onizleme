@@ -54,11 +54,9 @@
                         <label for="control-demo-6" class="col-sm-3">Tema Kategori</label>
                         <div id="control-demo-6" class="">
                             <select class="form-control" name="tema_kategori">
-                                <option>HTML</option>
-                                <option>CSS</option>
-                                <option>Javascript</option>
-                                <option>Bootstrap</option>
-                                <option>WordPress</option>
+                                <?php foreach ($this->basic_model->getTable('kategoriler') as $item):?>
+                                <option value="<?php echo $item->id ?>"><?php echo $item->kategori_adi ?></option>
+                                <?php endforeach; ?>
                             </select>
                         </div>
                     </div><!-- .form-group -->

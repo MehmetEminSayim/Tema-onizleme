@@ -3,7 +3,7 @@
         <div class="media">
             <div class="media-left">
                 <div class="avatar avatar-md avatar-circle">
-                    <a href="javascript:void(0)"><img class="img-responsive" src="<?php echo base_url("assest"); ?>/assets/images/221.jpg" alt="avatar"/></a>
+                    <a href="javascript:void(0)"><img class="img-responsive" src="<?php echo base_url("assest"); ?>/assets/images/123456.jpg" alt="avatar"/></a>
                 </div><!-- .avatar -->
             </div>
             <div class="media-body">
@@ -36,9 +36,9 @@
                                 </li>
                                 <li role="separator" class="divider"></li>
                                 <li>
-                                    <a class="text-color" href="logout.html">
+                                    <a class="text-color" href="<?php echo base_url('userop/logout')?>">
                                         <span class="m-r-xs"><i class="fa fa-power-off"></i></span>
-                                        <span>Home</span>
+                                        <span>Çıkış Yap</span>
                                     </a>
                                 </li>
                             </ul>
@@ -69,6 +69,19 @@
                     </a>
                 </li>
 
+                <li>
+                    <a href="<?php echo base_url("contract"); ?>">
+                        <i class="menu-icon fa fa-arrows"></i>
+                        <span class="menu-text">Sözleşmeler</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="<?php echo base_url("kategori"); ?>">
+                        <i class="menu-icon fa fa-ellipsis-v"></i>
+                        <span class="menu-text">Kategoriler</span>
+                    </a>
+                </li>
 
 
                 <li>

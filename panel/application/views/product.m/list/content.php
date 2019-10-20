@@ -23,7 +23,7 @@
                 <th><i class="fa fa-reorder"></i></th>
                 <th>#id</th>
                 <th>Başlık</th>
-                <th>Url</th>
+                <th>Tema Linki</th>
                 <th>Fiyat</th>
                 <th>Kategori</th>
 
@@ -40,7 +40,7 @@
                         <td> <?php echo $item->title; ?></td>
                         <td> <?php echo $item->url; ?></td>
                         <td><?php echo $item->tema_fiyat; ?></td>
-                        <td><?php echo $item->tema_kategori; ?></td>
+                        <td><?php echo $this->basic_model->getTable('kategoriler',['id' => $item->tema_kategori],true)->kategori_adi; ?></td>
 
 
                         <td>
