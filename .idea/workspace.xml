@@ -1,41 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4d178f20-ee46-4046-955e-e899c43e7f8d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/panel/application/controllers/contract.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/application/controllers/kategori.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/application/models/contract_model.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/application/models/kategori_model.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/application/views/contract.m/add/content.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/application/views/contract.m/add/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/application/views/contract.m/add/page_script.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/application/views/contract.m/list/content.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/application/views/contract.m/list/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/application/views/contract.m/update/content.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/application/views/contract.m/update/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/application/views/contract.m/update/page_script.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/application/views/kategori.m/add/content.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/application/views/kategori.m/add/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/application/views/kategori.m/add/page_script.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/application/views/kategori.m/list/content.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/application/views/kategori.m/list/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/application/views/kategori.m/update/content.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/application/views/kategori.m/update/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/application/views/kategori.m/update/page_script.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/application/controllers/userop.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/controllers/userop.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/application/controllers/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/controllers/users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/application/controllers/welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/controllers/welcome.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/application/views/inculudes/aside.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/inculudes/aside.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/application/views/inculudes/main_footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/inculudes/main_footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/application/views/inculudes/nav_bar.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/inculudes/nav_bar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/application/views/product.m/add/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/product.m/add/content.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/application/views/product.m/list/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/product.m/list/content.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/application/views/product.m/update/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/product.m/update/content.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/application/views/users.m/add/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/users.m/add/content.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/application/views/users.m/login/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/users.m/login/content.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/application/views/users.m/pasword/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/users.m/pasword/content.php" afterDir="false" />
-    </list>
+    <list default="true" id="4d178f20-ee46-4046-955e-e899c43e7f8d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +70,7 @@
       <workItem from="1571443263168" duration="629000" />
       <workItem from="1571489966815" duration="8203000" />
       <workItem from="1571504983902" duration="10413000" />
-      <workItem from="1571573509349" duration="1510000" />
+      <workItem from="1571573509349" duration="2266000" />
     </task>
     <servers />
   </component>

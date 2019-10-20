@@ -26,7 +26,7 @@ class userop extends CI_Controller{
 
     }
     public function do_login(){
-        
+
         if ( $sessionData['is_login'] = 1){
             redirect(base_url());
         }
