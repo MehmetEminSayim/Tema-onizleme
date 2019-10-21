@@ -4,6 +4,7 @@
     <list default="true" id="4d178f20-ee46-4046-955e-e899c43e7f8d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/panel/application/views/site/live_preview.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/site/live_preview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/assest/site/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/panel/assest/site/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +83,8 @@
       <workItem from="1571489966815" duration="8203000" />
       <workItem from="1571504983902" duration="10413000" />
       <workItem from="1571573509349" duration="2266000" />
-      <workItem from="1571655864102" duration="25114000" />
+      <workItem from="1571655864102" duration="25355000" />
+      <workItem from="1571693922682" duration="328000" />
     </task>
     <servers />
   </component>

@@ -190,7 +190,7 @@ if (!$redirect) :
     <h4>Bize Ulaşın </h4>
 </div>
 
-
+<div class="emin">
 <?php
 $iphone = stristr(@$_SERVER['HTTP_USER_AGENT'],"iPhone");
 $android = stristr(@$_SERVER['HTTP_USER_AGENT'],"Android");
@@ -214,6 +214,7 @@ if ($iphone || $android || $webos || $ipod || $bberry == true)
         </a>
     </div>
 <?php } ?>
+</div>
 
 
 
