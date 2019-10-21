@@ -14,4 +14,8 @@ class home extends CI_Controller
          $data['siteler'] = $this->basic_model->getTable('products');
          $this->load->view('site/live_preview',$data);
     }
+
+    function sozlesme(){
+        $this->load->view('site/hizmet_sozlesme');
+    }
 }

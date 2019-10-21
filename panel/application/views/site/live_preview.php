@@ -33,7 +33,8 @@ $current_theme = $_GET['theme'];
 $theme_found = false;
 
 ## build theme data array
-print_r($siteler);
+
+
 $i = 0;
 foreach ($siteler as $row){
     $theme_array[$i]['id'] = $row->title;
@@ -64,9 +65,7 @@ if (!$redirect) :
     endforeach;
 
     if ($theme_found == false) :
-        $current_theme_name = $theme_array[0]['id'];
-        $current_theme_url = $theme_array[0]['url'];
-        $current_theme_purchase_url = $theme_array[0]['ddn'];
+        $theme_found = false;
     endif;
     ?>
 
@@ -133,7 +132,7 @@ if (!$redirect) :
         <ul>
             <li id="theme_list"><a id="theme_select" href="#">
                     <?php
-                    if ($theme_found == false) : echo "Select a theme..."; else: echo $current_theme_name; endif; ?></a>
+                    if ($theme_found == false) : echo "Tema Seçiniz..."; else: echo $current_theme_name; endif; ?></a>
                 <ul>
                     <?php ?>
                     <?php
@@ -176,11 +175,44 @@ if (!$redirect) :
                 <a href="<?php echo $current_theme_purchase_url; ?>"><img src="<?php echo base_url('assest/site/')?>images/purchase.png" alt="Web Design Tunes Themes" /> Satın Al <?php echo '₺', $current_theme_fiyat?></a>
             </li>
             <li class="close" rel="<?php echo $current_theme_url; ?>">
-                <a href="<?php echo $current_theme_url; ?>"><img src="<?php echo base_url('assest/site/')?>images/cross.png" alt="Web Design Tunes Themes" /> Kapat</a>
+                <a href=""><img src="<?php echo base_url('assest/site/')?>images/cross.png" alt="Web Design Tunes Themes" /> Kapat</a>
             </li>
         </ul>
     </div>
 </div>
+
+
+<div>
+    <h4>Bize Ulaşın </h4>
+</div>
+
+
+<?php
+$iphone = stristr(@$_SERVER['HTTP_USER_AGENT'],"iPhone");
+$android = stristr(@$_SERVER['HTTP_USER_AGENT'],"Android");
+$webos = stristr(@$_SERVER['HTTP_USER_AGENT'],"webOS");
+$bberry = stristr(@$_SERVER['HTTP_USER_AGENT'],"BlackBerry");
+$ipod = stristr(@$_SERVER['HTTP_USER_AGENT'],"iPod");
+
+if ($iphone || $android || $webos || $ipod || $bberry == true)
+{
+    ?>
+    <div style="width:300px;position:fixed;top:450px;left: 0px;z-index:99999;font-size:12px;">
+
+        <a href="https://api.whatsapp.com/send?phone=905530065886">
+            <img style="width:40px;" src="https://demobul.net/images/whatsapp.png" alt="whatsapp">
+        </a>
+    </div>
+<?php }else{?>
+    <div style="width:300px;position:fixed;top:500px;left: 10px;z-index:99999;font-size:12px;">
+        <a href="https://api.whatsapp.com/send?phone=905530065886" target="_blank">
+            <img style="width:50px;" src="https://demobul.net/images/whatsapp.png" alt="whatsapp">
+        </a>
+    </div>
+<?php } ?>
+
+
+
 <iframe id="iframe" src="<?php echo $current_theme_url; ?>" frameborder="0" width="100%"></iframe>
 
 <!-- Place this tag after the last +1 button tag. -->
@@ -193,6 +225,28 @@ if (!$redirect) :
 </script>
 
 </body>
+
+
+<style>
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 7%;
+        background-color: grey;
+        opacity: 0.5;
+        color: white;
+        text-align: -webkit-center;
+    }
+</style>
+
+<div class="footer">
+    <a href="<?php echo base_url('home/sozlesme')?>" target="_blank">Hizmet Sözleşmesi</a>
+    <p>Copyright 2015 Mehmet Emin SAYIM  | Tüm haklar saklıdır.</p>
+</div>
+
+
 </html>
 <?php
 endif;

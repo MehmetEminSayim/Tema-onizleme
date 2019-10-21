@@ -1,2 +1,2 @@
-Boş bir content e sahibiz
+Site Admin Sayfasına Hoşgeldiniz...
 
