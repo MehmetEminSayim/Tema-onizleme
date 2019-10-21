@@ -242,8 +242,9 @@ if ($iphone || $android || $webos || $ipod || $bberry == true)
 </style>
 
 <div class="footer">
-    <a href="<?php echo base_url('home/sozlesme')?>" target="_blank">Hizmet Sözleşmesi</a>
-    <p>Copyright 2015 Mehmet Emin SAYIM  | Tüm haklar saklıdır.</p>
+
+    <p>Copyright <?php echo date("Y");?> <?php echo $this->basic_model->getTable('users',['id' => 16],true)->full_name;?>  | Tüm haklar saklıdır.</p>
+    <a href="<?php echo base_url('home/sozlesme')?>" target="_blank" class="foot">Hizmet Sözleşmesi</a>
 </div>
 
 
