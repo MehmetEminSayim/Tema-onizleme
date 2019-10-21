@@ -18,7 +18,7 @@
             <span class="zmdi zmdi-hc-lg zmdi-search"></span>
         </button>
 
-        <a href="../index.html" class="navbar-brand">
+        <a href="../../index.html" class="navbar-brand">
             <span class="fa fa-rebel"><i class=""></i></span>
             <span class="brand-name">Temaldim</span>
         </a>

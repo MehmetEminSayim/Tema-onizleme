@@ -85,9 +85,9 @@
 
 
                 <li>
-                    <a href="javascript:void(0)">
+                    <a href="<?php echo base_url("logo"); ?>">
                         <i class="menu-icon zmdi zmdi-lamp zmdi-hc-lg"></i>
-                        <span class="menu-text">Pop-up Hizmeti</span>
+                        <span class="menu-text">Logo Ekle</span>
                     </a>
                 </li>
 
