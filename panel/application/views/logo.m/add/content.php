@@ -21,7 +21,7 @@
                             <small class="input-form-error" style="font-size:10pt; color:red; font-family:sans-serif, Verdana; font-style: italic"; >
                                 <?php echo form_error("logo_adi"); ?>
                             </small>
-                    <?php } ?>
+                    <?php } ?>w
 
                     </div>
 

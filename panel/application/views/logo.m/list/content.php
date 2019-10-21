@@ -36,8 +36,8 @@
                             <td> <?php echo $item->image; ?></td>
 
                             <td>
-
-                                <a href="<?php echo base_url("logo/delete/$item->id")?>" class="btn btn-sn btn danger "><i class="fa fa-pencil-square-o"></i> Sil</a>
+                                <a href="<?php echo base_url("logo/update/$item->id")?>" class="btn btn-sn btn-primary "><i class="fa fa-pencil-square-o"></i> Düzenle</a>
+                                <a href="<?php echo base_url("logo/delete/$item->id")?>" class="btn btn-sn btn danger "><i class="fa fa-cut"></i> Sil</a>
 
                             </td>
 
