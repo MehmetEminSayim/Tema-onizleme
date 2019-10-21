@@ -66,6 +66,10 @@ if (!$redirect) :
 
     if ($theme_found == false) :
         $theme_found = false;
+       /** $current_theme_name = $theme_array[0]['id'];
+        $current_theme_url = $theme_array[0]['url'];
+        $current_theme_purchase_url = $theme_array[0]['ddn'];
+        $theme_found = false;*/
     endif;
     ?>
 
