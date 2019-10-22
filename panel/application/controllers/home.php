@@ -18,4 +18,17 @@ class home extends CI_Controller
     function sozlesme(){
         $this->load->view('site/hizmet_sozlesme');
     }
+    function save(){
+        $data =  $_POST;
+        unset($data['0']);
+
+       if ( $this->basic_model->insert('kullanici_bilgileri',$data)){
+
+           redirect(base_url("home"));
+       }
+       else{
+           redirect(base_url("error"));
+           echo "işlme başarısız";
+       }
+    }
 }

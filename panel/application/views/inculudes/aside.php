@@ -91,6 +91,13 @@
                     </a>
                 </li>
 
+                <li>
+                    <a href="<?php echo base_url("siparis"); ?>">
+                        <i class="menu-icon zmdi zmdi-lamp zmdi-hc-lg"></i>
+                        <span class="menu-text">Gelen Siparişler</span>
+                    </a>
+                </li>
+
 
 
 
