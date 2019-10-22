@@ -170,12 +170,15 @@ if (!$redirect) :
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <div class="form-style-8">
-                    <h2>Login to your account</h2>
+                    <h2>SİPARİŞ EKRANI</h2>
                     <form>
-                        <input type="text" name="field1" placeholder="Full Name" />
+                        <input type="text" name="field1" placeholder="Ad Soyad" />
                         <input type="email" name="field2" placeholder="Email" />
-                        <input type="url" name="field3" placeholder="Website" />
-                        <textarea placeholder="Message" onkeyup="adjust_textarea(this)"></textarea>
+                        <input type="url" name="field3" placeholder="Telefon Numaranız" />
+                        <input type="url" name="field3" placeholder="Kurulacak Domain" />
+                        <input type="url" name="field3" placeholder="Yönlendirilecek ns alanı" />
+                        <input type="url" name="field3" placeholder="Banka Hesap Bilgileri" />
+
                         <input type="button" value="Send Message" />
                     </form>
                 </div>
