@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d178f20-ee46-4046-955e-e899c43e7f8d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/panel/assest/site/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/panel/assest/site/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/panel/assest/site/js/modal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/panel/assest/site/modal.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/views/site/live_preview.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/site/live_preview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/assest/site/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/panel/assest/site/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,6 +24,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -30,7 +37,8 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/panel/application/models" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/panel/application/views/site" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
@@ -41,10 +49,11 @@
       <recent name="C:\xampp\htdocs\falay\panel\application\views\site" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\falay\panel\application\views\site" />
+      <recent name="C:\xampp\htdocs\falay\panel\assest\site" />
       <recent name="C:\xampp\htdocs\falay\panel\application\models" />
       <recent name="C:\xampp\htdocs\falay\panel\application\controllers" />
       <recent name="C:\xampp\htdocs\falay\panel\application\views" />
-      <recent name="C:\xampp\htdocs\falay\panel\application\views\users.m" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -83,7 +92,8 @@
       <workItem from="1571573509349" duration="2266000" />
       <workItem from="1571655864102" duration="25355000" />
       <workItem from="1571693922682" duration="328000" />
-      <workItem from="1571748402841" duration="1648000" />
+      <workItem from="1571748402841" duration="4628000" />
+      <workItem from="1571758721777" duration="8895000" />
     </task>
     <servers />
   </component>

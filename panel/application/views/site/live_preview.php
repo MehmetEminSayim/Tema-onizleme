@@ -163,6 +163,27 @@ if (!$redirect) :
 
 
 
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="form-style-8">
+                    <h2>Login to your account</h2>
+                    <form>
+                        <input type="text" name="field1" placeholder="Full Name" />
+                        <input type="email" name="field2" placeholder="Email" />
+                        <input type="url" name="field3" placeholder="Website" />
+                        <textarea placeholder="Message" onkeyup="adjust_textarea(this)"></textarea>
+                        <input type="button" value="Send Message" />
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+
 
 
         <div class="responsive">
@@ -176,19 +197,18 @@ if (!$redirect) :
 
         <ul class="links">
             <li class="purchase" rel="<?php echo $current_theme_purchase_url; ?>">
-                <a href="<?php echo $current_theme_purchase_url; ?>"><img src="<?php echo base_url('assest/site/')?>images/purchase.png" alt="Web Design Tunes Themes" /> Satın Al <?php echo '₺', $current_theme_fiyat?></a>
+
+                <button id="myBtn"><img src="<?php echo base_url('assest/site/')?>images/purchase.png" alt="Web Design Tunes Themes" /> Satın Al <?php echo '₺', $current_theme_fiyat?></button>
             </li>
-            <li class="close" rel="<?php echo $current_theme_url; ?>">
+
+
+                <li class="close" rel="<?php echo $current_theme_url; ?>">
                 <a href=""><img src="<?php echo base_url('assest/site/')?>images/cross.png" alt="Web Design Tunes Themes" /> Kapat</a>
             </li>
         </ul>
     </div>
 </div>
 
-
-<div>
-    <h4>Bize Ulaşın </h4>
-</div>
 
 <div class="emin">
 <?php
@@ -218,7 +238,11 @@ if ($iphone || $android || $webos || $ipod || $bberry == true)
 
 
 
+
 <iframe id="iframe" src="<?php echo $current_theme_url; ?>" frameborder="0" width="100%"></iframe>
+
+<!-- Large modal -->
+
 
 <!-- Place this tag after the last +1 button tag. -->
 <script type="text/javascript">
@@ -228,6 +252,7 @@ if ($iphone || $android || $webos || $ipod || $bberry == true)
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
     })();
 </script>
+
 
 </body>
 
@@ -251,6 +276,146 @@ if ($iphone || $android || $webos || $ipod || $bberry == true)
     <p>Copyright <?php echo date("Y");?> <?php echo $this->basic_model->getTable('users',['id' => 16],true)->full_name;?>  | Tüm haklar saklıdır.</p>
     <a href="<?php echo base_url('home/sozlesme')?>" target="_blank" class="foot">Hizmet Sözleşmesi</a>
 </div>
+
+<style>
+    body {font-family: Arial, Helvetica, sans-serif;}
+
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+    }
+
+</style>
+<script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<style type="text/css">
+    .form-style-8{
+        font-family: 'Open Sans Condensed', arial, sans;
+        width: 500px;
+        padding: 30px;
+        background: #FFFFFF;
+        margin: 50px auto;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+        -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+        -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+
+    }
+    .form-style-8 h2{
+        background: #4D4D4D;
+        text-transform: uppercase;
+        font-family: 'Open Sans Condensed', sans-serif;
+        color: #797979;
+        font-size: 18px;
+        font-weight: 100;
+        padding: 20px;
+        margin: -30px -30px 30px -30px;
+    }
+    .form-style-8 input[type="text"],
+    .form-style-8 input[type="date"],
+    .form-style-8 input[type="datetime"],
+    .form-style-8 input[type="email"],
+    .form-style-8 input[type="number"],
+    .form-style-8 input[type="search"],
+    .form-style-8 input[type="time"],
+    .form-style-8 input[type="url"],
+    .form-style-8 input[type="password"],
+    .form-style-8 textarea,
+    .form-style-8 select
+    {
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        outline: none;
+        display: block;
+        width: 100%;
+        padding: 7px;
+        border: none;
+        border-bottom: 1px solid #ddd;
+        background: transparent;
+        margin-bottom: 10px;
+        font: 16px Arial, Helvetica, sans-serif;
+        height: 45px;
+    }
+    .form-style-8 textarea{
+        resize:none;
+        overflow: hidden;
+    }
+    .form-style-8 input[type="button"],
+    .form-style-8 input[type="submit"]{
+        -moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+        -webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+        box-shadow: inset 0px 1px 0px 0px #45D6D6;
+        background-color: #2CBBBB;
+        border: 1px solid #27A0A0;
+        display: inline-block;
+        cursor: pointer;
+        color: #FFFFFF;
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 14px;
+        padding: 8px 18px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    .form-style-8 input[type="button"]:hover,
+    .form-style-8 input[type="submit"]:hover {
+        background:linear-gradient(to bottom, #34CACA 5%, #30C9C9 100%);
+        background-color:#34CACA;
+    }
+</style>
+<script type="text/javascript">
+    //auto expand textarea
+    function adjust_textarea(h) {
+        h.style.height = "20px";
+        h.style.height = (h.scrollHeight)+"px";
+    }
+</script>
 
 
 </html>
