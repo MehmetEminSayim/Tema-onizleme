@@ -22,8 +22,11 @@ class home extends CI_Controller
         $data =  $_POST;
         unset($data['0']);
 
-       if ( $this->basic_model->insert('kullanici_bilgileri',$data)){
 
+       if ($this->basic_model->insert('kullanici_bilgileri',$data)){
+
+
+           //$this->session->set_flashdata('save2');
            redirect(base_url("home"));
        }
        else{
