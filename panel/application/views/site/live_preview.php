@@ -171,7 +171,8 @@ if (!$redirect) :
 
 
 
-        <?php $this->load->view("site/_master/form_m",array('tema' => $current_theme_uniq)); ?>
+       <?php $this->load->view("site/_master/form_m",array('tema' => $current_theme_uniq)); ?>
+
 
 
 
