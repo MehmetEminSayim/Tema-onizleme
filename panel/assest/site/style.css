@@ -423,9 +423,15 @@ img.preview {
 	}
 }
 
-
-
-
-
-
-
+.kapat{
+	background-color: #FF0000; /* Green */
+	border: none;
+	color: white;
+	padding: 8px 25px;
+	border-radius: 2px;
+	text-align: center;
+	margin-left: 5px;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+}
