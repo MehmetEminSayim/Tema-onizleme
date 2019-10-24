@@ -28,9 +28,12 @@ function is_windows() {
 
 ## get current theme name
 
+
 //$current_theme_url= $_GET['url_value'];
 $current_theme = $_GET['theme'];
 $theme_found = false;
+
+
 
 ## build theme data array
 
@@ -46,7 +49,6 @@ foreach ($siteler as $row){
     $theme_array[$i]['fiyat'] = $row->tema_fiyat;
     $theme_array[$i]['uniq'] = $row->title;
 $i++;}
-
 
 
 if (!$redirect) :
@@ -137,7 +139,7 @@ if (!$redirect) :
 <div id="switcher">
     <div class="center">
         <div class="logo">
-            <a href="<?php echo$this->basic_model->getTable('logo',['id' => 4],true)->image;?>" title="Designing Media Works"><img src="<?php echo base_url('uploads/').$this->basic_model->getTable('logo',['id' => 4],true)->image?>" width="40" height="40" style="margin-top: 5px;" alt="Designing Media Themes" /></a>
+            <a href="<?php echo $this->basic_model->getTable('logo',['id' => 4],true)->image;?>" title="Designing Media Works"><img src="<?php echo base_url('uploads/').$this->basic_model->getTable('logo',['id' => 4],true)->image?>" width="40" height="40" style="margin-top: 5px;" alt="Designing Media Themes" /></a>
         </div>
 
 
@@ -171,6 +173,17 @@ if (!$redirect) :
 
 
 
+
+            <select  class="toprak" onchange="fetch_select(this.value);">
+                <option>Kategori seçiniz...</option>
+                <?php foreach ($this->basic_model->getTable('kategoriler') as $item){?>
+                <option> <?php echo $item->kategori_adi; ?></option>
+                <?php }?>
+            </select>
+
+
+
+
        <?php $this->load->view("site/_master/form_m",array('tema' => $current_theme_uniq)); ?>
 
 
@@ -184,53 +197,40 @@ if (!$redirect) :
             <a href="#" class="mobileportrait" title="View Mobile Portrait (320x480)"></a>
         </div>
 
-
         <ul class="links">
             <?php if ($current_theme_url):?>
             <li class="purchase" rel="<?php echo $current_theme_purchase_url; ?>">
 
-                <button id="myBtn"><img src="<?php echo base_url('assest/site/')?>images/purchase.png" alt="Web Design Tunes Themes" /> Satın Al <?php echo '₺', $current_theme_fiyat?></button>
+               <a id="myBtn"><img src="<?php echo base_url('assest/site/')?>images/purchase.png" alt="Web Design Tunes Themes" > Satın Al <?php echo '₺', $current_theme_fiyat?></a>
 
             </li>
 
+                <a href="http://localhost/falay/panel/">
+                <li class="kapat" rel="<?php  ?>"
+                <a id="myBtn"><img src="<?php echo base_url('assest/site/')?>images/cross.png" alt="Web Design Tunes Themes" > Kapat </a>
+                </li>
+                </a>
 
-                <li class="close" rel="<?php echo $current_theme_url; ?>">
-                <a href=""><img src="<?php echo base_url('assest/site/')?>images/cross.png" alt="Web Design Tunes Themes" /> Kapat</a>
-            </li>
             <?php endif;?>
         </ul>
     </div>
 </div>
 
 
-<div class="emin">
-<?php
-$iphone = stristr(@$_SERVER['HTTP_USER_AGENT'],"iPhone");
-$android = stristr(@$_SERVER['HTTP_USER_AGENT'],"Android");
-$webos = stristr(@$_SERVER['HTTP_USER_AGENT'],"webOS");
-$bberry = stristr(@$_SERVER['HTTP_USER_AGENT'],"BlackBerry");
-$ipod = stristr(@$_SERVER['HTTP_USER_AGENT'],"iPod");
 
-if ($iphone || $android || $webos || $ipod || $bberry == true)
-{
-    ?>
-    <div style="width:300px;position:fixed;top:450px;left: 0px;z-index:99999;font-size:12px;">
-
-        <a href="https://api.whatsapp.com/send?phone=905530065886">
-            <img style="width:40px;" src="https://demobul.net/images/whatsapp.png" alt="whatsapp">
-        </a>
-    </div>
-<?php }else{?>
-    <div style="width:300px;position:fixed;top:500px;left: 10px;z-index:99999;font-size:12px;">
-        <a href="https://api.whatsapp.com/send?phone=905530065886" target="_blank">
-            <img style="width:50px;" src="https://demobul.net/images/whatsapp.png" alt="whatsapp">
-        </a>
-    </div>
-<?php } ?>
-</div>
-
-
-
+<script type="text/javascript">
+    (function () {
+        var options = {
+            whatsapp: "+905320000000", // WhatsApp numaranızı buraya girin
+            call_to_action: "Whatsapp Destek ", // Görünecek metin
+            position: "left", // Position may be 'right' or 'left'
+        };
+        var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static." + host;
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+    })();
+</script>
 
 <iframe id="iframe" src="<?php echo $current_theme_url; ?>" frameborder="0" width="100%"></iframe>
 
@@ -270,34 +270,7 @@ if ($iphone || $android || $webos || $ipod || $bberry == true)
     <a href="<?php echo base_url('home/sozlesme')?>" target="_blank" class="foot">Hizmet Sözleşmesi</a>
 </div>
 
-<style>
-    body {font-family: Arial, Helvetica, sans-serif;}
 
-    /* The Modal (background) */
-    .modal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Sit on top */
-        padding-top: 100px; /* Location of the box */
-        left: 0;
-        top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    }
-
-    /* Modal Content */
-    .modal-content {
-        background-color: #fefefe;
-        margin: auto;
-        padding: 20px;
-        border: 1px solid #888;
-        width: 80%;
-    }
-
-</style>
 <script>
     // Get the modal
     var modal = document.getElementById("myModal");
@@ -326,10 +299,37 @@ if ($iphone || $android || $webos || $ipod || $bberry == true)
     }
 </script>
 
+<style>
+    .toprak {
+
+        padding: 8px 15px;
+        width: 200px;
+        margin-top: 1px;
+        text-color:	#ffffff;
+        border-radius: 1px;
+        background-color: #ffffff;
+    }
+</style>
+
+<script type="text/javascript">
+    function fetch_select(val)
+    {
+        $.ajax({
+            type: 'post',
+            url: 'fetch_data.php',
+            data: {
+                get_option:val
+            },
+            success: function (response) {
+                document.getElementById("new_select").innerHTML=response;
+            }
+        });
+    }
+
+</script>
+<!--#2b2b2b -->
 
 <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-
-
 
 </html>
 <?php
