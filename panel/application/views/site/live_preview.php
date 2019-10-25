@@ -198,17 +198,19 @@ if (!$redirect) :
             <a href="#" class="mobileportrait" title="View Mobile Portrait (320x480)"></a>
         </div>
         <?php if ($this->session->flashdata('success')=='yes'):?>
-            <div class="alert alert-success" role="alert" style="text-align: center;">
-                <strong style="font-size: 26px; font-weight: bold; font-family:Arial, Helvetica, sans-serif;">Tebriklerr! </strong></br>
-                <span style="font-size: 22px; font-weight: bold;">Siparişiniz Başarılı Bir Şekilde Ulaşmıştır.Bizi seçtiğiniz için teşekkür ederiz...</span>
+            <div class="alert alert-success col-md-6" role="alert" style="text-align: center;" >
+                <strong style="font-size: 22px; font-weight: ; font-family:sans-serif, Verdana;">Tebriklerr! </strong></br>
+                <span style="font-size: 18px; font-weight: ;">
+                    Siparişiniz Başarılı Bir Şekilde Ulaşmıştır.Bizi seçtiğiniz için teşekkür ederiz...
+                </span>
                 <a href="#" class="alert-link"></a>
             </div>
         <?php endif;?>
 
     <?php if ($this->session->flashdata('error')=='no'):?>
             <div class="alert alert-success" role="alert" style="text-align: center;">
-                <strong style="font-size: 26px; font-weight: bold; font-family:Arial, Helvetica, sans-serif;">Tebriklerr! </strong></br>
-                <span style="font-size: 22px; font-weight: bold;">Siparişiniz Başarılı Bir Şekilde Ulaşmıştır.Bizi seçtiğiniz için teşekkür ederiz...</span>
+                <strong style="font-size: 22px; font-weight: bold; font-family:Arial, Helvetica, sans-serif;">Tebriklerr! </strong></br>
+                <span style="font-size: 18px; font-weight: bold;">Siparişiniz Başarılı Bir Şekilde Ulaşmıştır.Bizi seçtiğiniz için teşekkür ederiz...</span>
                 <a href="#" class="alert-link"></a>
             </div>
     <?php endif;?>
