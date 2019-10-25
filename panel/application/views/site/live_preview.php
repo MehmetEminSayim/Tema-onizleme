@@ -1,4 +1,5 @@
 <?php
+
 error_reporting(0);
 function is_firefox() {
     $agent = '';
@@ -42,7 +43,7 @@ $i = 0;
 foreach ($siteler as $row){
     $theme_array[$i]['id'] = $row->title;
     $theme_array[$i]['url'] = $row->url;
-    $theme_array[$i]['preview'] = $this->basic_model->getTable('product_img',['tema_id' => $row->id],true)->img_url;
+    $theme_array[$i]['preview'] = base_url('uploads/').$this->basic_model->getTable('product_img',['tema_id' => $row->id],true)->img_url;
     $theme_array[$i]['type'] = $this->basic_model->getTable('kategoriler',['id' => $row->tema_kategori],true)->kategori_adi;
     $theme_array[$i]['type_color'] = "ec6334";
     $theme_array[$i]['ddn'] = "http://themeforest.net/user/designingmedia/portfolio?ref=designingmedia";
@@ -105,7 +106,7 @@ if (!$redirect) :
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type="text/css">
 
     <!-- JavaScript -->
-    <script type="text/javascript" src="<?php echo base_url('assest/site/')?>js/jquery-1.9.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <script >
         var theme_list_open=false;
@@ -147,7 +148,7 @@ if (!$redirect) :
             <li id="theme_list"><a id="theme_select" href="#">
                     <?php
                     if ($theme_found == false) : echo "Tema Seçiniz..."; else: echo $current_theme_name; endif; ?></a>
-                <ul>
+                <ul class="temayazdir">
                     <?php ?>
                     <?php
                     foreach ($theme_array as $i => $theme) :
@@ -174,10 +175,10 @@ if (!$redirect) :
 
 
 
-            <select  class="toprak" onchange="fetch_select(this.value);">
+            <select  class="toprak" onchange="temegetir(this.value)" >
                 <option>Kategori seçiniz...</option>
                 <?php foreach ($this->basic_model->getTable('kategoriler') as $item){?>
-                <option> <?php echo $item->kategori_adi; ?></option>
+                <option value="<?php echo $item->id; ?>"> <?php echo $item->kategori_adi; ?></option>
                 <?php }?>
             </select>
 
@@ -196,6 +197,21 @@ if (!$redirect) :
             <a href="#" class="mobilelandscape" title="View Mobile Landscape (480x320)"></a>
             <a href="#" class="mobileportrait" title="View Mobile Portrait (320x480)"></a>
         </div>
+        <?php if ($this->session->flashdata('success')=='yes'):?>
+            <div class="alert alert-success" role="alert" style="text-align: center;">
+                <strong style="font-size: 26px; font-weight: bold; font-family:Arial, Helvetica, sans-serif;">Tebriklerr! </strong></br>
+                <span style="font-size: 22px; font-weight: bold;">Siparişiniz Başarılı Bir Şekilde Ulaşmıştır.Bizi seçtiğiniz için teşekkür ederiz...</span>
+                <a href="#" class="alert-link"></a>
+            </div>
+        <?php endif;?>
+
+    <?php if ($this->session->flashdata('error')=='no'):?>
+            <div class="alert alert-success" role="alert" style="text-align: center;">
+                <strong style="font-size: 26px; font-weight: bold; font-family:Arial, Helvetica, sans-serif;">Tebriklerr! </strong></br>
+                <span style="font-size: 22px; font-weight: bold;">Siparişiniz Başarılı Bir Şekilde Ulaşmıştır.Bizi seçtiğiniz için teşekkür ederiz...</span>
+                <a href="#" class="alert-link"></a>
+            </div>
+    <?php endif;?>
 
         <ul class="links">
             <?php if ($current_theme_url):?>
@@ -205,7 +221,7 @@ if (!$redirect) :
 
             </li>
 
-                <a href="http://localhost/falay/panel/">
+                <a href="<?php echo $current_theme_url; ?>">
                 <li class="kapat" rel="<?php  ?>"
                 <a id="myBtn"><img src="<?php echo base_url('assest/site/')?>images/cross.png" alt="Web Design Tunes Themes" > Kapat </a>
                 </li>
@@ -215,7 +231,6 @@ if (!$redirect) :
         </ul>
     </div>
 </div>
-
 
 
 <script type="text/javascript">
@@ -302,32 +317,42 @@ if (!$redirect) :
 <style>
     .toprak {
 
+        @media only screen and ( max-width: 767px);
         padding: 8px 15px;
-        width: 200px;
+
         margin-top: 1px;
-        text-color:	#ffffff;
-        border-radius: 1px;
-        background-color: #ffffff;
+        font-family: sans-serif, Verdana;
+        font-weight: bold;
+        background-color: #2b2b2b;
+        color: #dfdfdf;
+
     }
 </style>
 
+
+<!--#2b2b2b -->
+
 <script type="text/javascript">
-    function fetch_select(val)
-    {
+var baseuri = '<?php echo base_url('uploads/')?>';
+var baseuri2 = '<?php echo base_url('')?>';
+    function temegetir(temaid) {
         $.ajax({
-            type: 'post',
-            url: 'fetch_data.php',
-            data: {
-                get_option:val
-            },
-            success: function (response) {
-                document.getElementById("new_select").innerHTML=response;
+            url: "<?php echo base_url('home/urun_tema')?>",
+            type: "post",
+            data: {temaid:temaid} ,
+            dataType: 'json',
+            success: function (data) {
+                $('.temayazdir').empty();
+                $.each(data, function( i ){
+                    $('.temayazdir').append('<li class="button_a">\n' +
+                        '\t\t\t\t\t<a href="'+data[i].url+'" >'+data[i].title+' <span style="background:#ec6334">'+data[i].kategori_adi+'</span></a><img alt="" class="preview" src="'+baseuri+data[i].img_url+'"></li>')
+                });
             }
         });
     }
 
+
 </script>
-<!--#2b2b2b -->
 
 <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 

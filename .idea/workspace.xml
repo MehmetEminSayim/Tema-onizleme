@@ -3,9 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="4d178f20-ee46-4046-955e-e899c43e7f8d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/controllers/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/controllers/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/models/Basic_Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/models/Basic_Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/views/siparisler.m/list/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/siparisler.m/list/content.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/panel/application/views/site/_master/form_m.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/site/_master/form_m.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/panel/application/views/site/live_preview.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/site/live_preview.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/panel/assest/site/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/panel/assest/site/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/uploads/Adsız.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/uploads/WhatsApp_Image_2019-10-14_at_15_38_49_-_Kopya.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/uploads/xiaomi-redmi-note-7-xiaomi-turkiye-garantili-10183268-473705-s11.jpg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +100,9 @@
       <workItem from="1571778575148" duration="2000" />
       <workItem from="1571826842610" duration="10516000" />
       <workItem from="1571850134701" duration="11526000" />
-      <workItem from="1571923619066" duration="7531000" />
+      <workItem from="1571923619066" duration="9618000" />
+      <workItem from="1571940824619" duration="18842000" />
+      <workItem from="1572001382143" duration="3761000" />
     </task>
     <servers />
   </component>

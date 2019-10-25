@@ -29,49 +29,51 @@
 
 </style>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 
-
-<!--<?if($this->session->flashdata('save2')):?>
-    <p class='flashMsg flashSuccess'> <?=$this->session->flashdata('save2')?> </p>
-    <label for="">İşleminiz Başarılı </label>
-<?endif?>
- -->
 <div id="myModal" class="modal">
     <!-- Modal content -->
     <div class="modal-content col-md-12">
         <span class="close">&times;</span>
 
     <div class="col-md-12">
+        <legend style="text-align: center; margin-bottom: 30px; font-size: 24px; font-weight: bold;">
+
+            <!--<?php foreach ($this->basic_model->getTable('products') as $item){?>
+                <option> <?php echo $item->title; ?></option>
+            <?php }?> -->
+            Sipariş Formu
+        </legend>
         <div id="ortala" class="col-md-6">
-    <legend style="text-align: center">Sipariş Formu</legend>
+
            <form class="form-horizontal" style="position: center;" action="<?php echo base_url("home/save"); ?>" method="post" enctype="multipart/form-data">
                <fieldset>
 
                    <!-- Text input-->
                    <div class="form-group">
                        <div class="col-md-12">
-                           <input id="textinput" name="adi_soyadi" type="text" placeholder="Ad Soyad" class="form-control input-md">
+                           <input required id="textinput" name="adi_soyadi" type="text" placeholder="Ad Soyad" class="form-control input-md">
                        </div>
                    </div>
                    <div class="form-group">
                        <div class="col-md-12">
-                           <input id="textinput" name="e_posta" type="text" placeholder="Eposta" class="form-control input-md">
+                           <input required id="textinput" name="e_posta" type="email" placeholder="Eposta" class="form-control input-md">
                        </div>
                    </div>
                    <div class="form-group">
                        <div class="col-md-12">
-                           <input id="textinput" name="telefon_no" type="text" placeholder="Telefon numarası" class="form-control input-md">
+                           <input required id="textinput" name="telefon_no" maxlength="10" type="text" placeholder="Telefon numarası" class="form-control input-md">
                        </div>
                    </div>
                    <div class="form-group">
                        <div class="col-md-12">
-                           <input id="textinput" name="domain" type="text" placeholder="Domain " class="form-control input-md">
+                           <input required id="textinput" name="domain" type="text" placeholder="Domain " class="form-control input-md">
                        </div>
                    </div>
                    <div class="form-group">
                        <div class="col-md-12">
-                           <input id="textinput" name="ns_alanı" type="text" placeholder="Ns alanı" class="form-control input-md">
+                           <input required id="textinput" name="ns_alanı" type="text" placeholder="Ns alanı" class="form-control input-md">
                        </div>
                    </div>
 
@@ -81,8 +83,8 @@
                    <div class="form-group">
 
                        <div class="col-md-12">
-                           <select id="selectbasic" name="banka_bilgileri" class="form-control">
-                               <option value="Havale">Havale </option>
+                           <select required id="selectbasic" name="banka_bilgileri" class="form-control">
+                               <option required value="Havale">Havale </option>
                                <option value="eft" disabled>Kartla Ödeme</option>
                            </select>
                        </div>
@@ -90,7 +92,7 @@
 
                    <div class="form-group">
                        <div class="col-md-12">
-                           <input type="checkbox" id=""/> Üyelik Sözleşmesi şartlarını okudum ve kabul ediyorum.
+                           <input required type="checkbox" id="" name="sozlesme_kabul"/> Hizmet Sözleşmesi şartlarını okudum ve kabul ediyorum.
                        </div>
                    </div>
 
@@ -118,7 +120,7 @@
             <p style="text-align: center; padding: 20px; line-height: 25px; font-weight: bold;">Havale İle Ödeme
                 Banka havalesi ile ödemek için açıklama kısmına ürünün adını yazarak aşağıda belirtilen hesap numarasına tutarı ödeyiniz.
                 Ödeme dekontunu ve sipariş bilgilerinizi (adres, isim, telefon) aşağıda belirtilen e-posta adresine iletiniz.
-                Ödeme teyidi alındıktan sonra ürün kargolanacaktır.<br>
+                Ödeme teyidi alındıktan sonra temanız web sitenizde aktif olacaktır.<br>
                 ENGİN TUTAR / FINANSBANK / TR75 0011 1000 0000 0038 5585 01<br>
                 ENGİN TUTAR / ZİRAATBANK / TR75 0011 1000 0000 0038 5585 01<br>
                 ENGİN TUTAR / İŞBANK /     TR75 0011 1000 0000 0038 5585 01<br>

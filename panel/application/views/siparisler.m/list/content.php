@@ -28,6 +28,7 @@
                     <th>Ns Alanı</th>
                     <th>Banka Bilgileri</th>
                     <th>Tema Adı</th>
+                    <th>Sözleşme Kabul</th>
 
                     </thead>
                     <tbody>
@@ -44,6 +45,7 @@
                             <td> <?php echo $item->ns_alanı ; ?></td>
                             <td> <?php echo $item->banka_bilgileri ; ?></td>
                             <td> <?php echo $item->tema ; ?></td>
+                            <td> <?php echo $item->sozlesme_kabul ; ?></td>
 
 
                             <td><a href="<?php echo base_url("siparis/delete/$item->id")?>" class="btn btn-sn btn danger "><i class="fa fa-pencil-square-o"></i> Sil</a></td>
