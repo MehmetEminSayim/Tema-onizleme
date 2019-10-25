@@ -77,7 +77,8 @@ color: #fff;
 	width: 200px;
 	display: block;
 	padding:10px 9px;
-	color: #dfdfdf;	
+	color: #dfdfdf;
+	border: #8fdf82;
     background-position: 95% 53%;
     border-radius:2px;
     font-weight: 700;
@@ -219,6 +220,7 @@ color: #fff;
 
 .purchase a {
     padding: 9px 15px 8px 8px;
+	@media only screen and ( max-width: 767px);
     float: left;
 	border-radius: 2px;
     font-weight: bold;
@@ -424,6 +426,7 @@ img.preview {
 }
 
 .kapat{
+@media only screen and ( max-width: 767px);
 	background-color: #FF0000; /* Green */
 	border: none;
 	color: white;
