@@ -144,8 +144,9 @@ if (!$redirect) :
         </div>
 
 
-        <ul>
-            <li id="theme_list"><a id="theme_select" href="#">
+
+        <ul style="">
+            <li style="" id="theme_list"><a id="theme_select" href="#">
                     <?php
                     if ($theme_found == false) : echo "Tema Seçiniz..."; else: echo $current_theme_name; endif; ?></a>
                 <ul class="temayazdir">
@@ -156,7 +157,7 @@ if (!$redirect) :
 					<a href="#" rel="' . $theme['url'] . ',' . $theme['ddn'] . ','.$theme['id'].'">' .
                             $_SESSION['currentthemename']= ucfirst($theme['id']) .' <span style="background:#'.$theme['type_color'].'">'.$theme['type'].'</span></a>';
                         if(isset($theme['preview'])){
-                            echo '<img  alt="" class="preview" src="';
+                            echo '<img width="500px;" height="300px"  alt="" class="preview" src="';
                             if(strpos($theme['preview'], 'http://') === false){
                                 echo 'product_previews/'.$theme['preview'];
                             }
@@ -175,28 +176,26 @@ if (!$redirect) :
 
 
 
-            <select  class="toprak" onchange="temegetir(this.value)" >
-                <option>Kategori seçiniz...</option>
-                <?php foreach ($this->basic_model->getTable('kategoriler') as $item){?>
+        <select style=";"  class="toprak" onchange="temegetir(this.value)" >
+            <option>Kategori seçiniz...</option>
+            <?php foreach ($this->basic_model->getTable('kategoriler') as $item){?>
                 <option value="<?php echo $item->id; ?>"> <?php echo $item->kategori_adi; ?></option>
-                <?php }?>
-            </select>
+            <?php }?>
+        </select>
 
 
 
-
-       <?php $this->load->view("site/_master/form_m",array('tema' => $current_theme_uniq)); ?>
-
-
-
-
-        <div class="responsive">
+       <div class="responsive">
             <a href="#" class="desktop active" title="View Desktop Version"></a>
             <a href="#" class="tabletlandscape" title="View Tablet Landscape (1024x768)"></a>
             <a href="#" class="tabletportrait" title="View Tablet Portrait (768x1024)"></a>
             <a href="#" class="mobilelandscape" title="View Mobile Landscape (480x320)"></a>
             <a href="#" class="mobileportrait" title="View Mobile Portrait (320x480)"></a>
         </div>
+
+
+        <?php $this->load->view("site/_master/form_m",array('tema' => $current_theme_uniq)); ?>
+
         <?php if ($this->session->flashdata('success')=='yes'):?>
             <div class="alert alert-success col-md-6" role="alert" style="text-align: center;" >
                 <strong style="font-size: 22px; font-weight: ; font-family:sans-serif, Verdana;">Tebriklerr! </strong></br>
@@ -224,9 +223,11 @@ if (!$redirect) :
             </li>
 
                 <a href="<?php echo $current_theme_url; ?>">
-                <li class="kapat" rel="<?php  ?>"
-                <a id="myBtn"><img src="<?php echo base_url('assest/site/')?>images/cross.png" alt="Web Design Tunes Themes" > Kapat </a>
-                </li>
+                    <li class="kapat" rel="<?php  ?>"
+                    <a id="myBtn">
+                        <img src="<?php echo base_url('assest/site/')?>images/cross.png" alt="Web Design Tunes Themes" > Kapat
+                    </a>
+                    </li>
                 </a>
 
             <?php endif;?>
@@ -283,8 +284,8 @@ if (!$redirect) :
 
 <div class="footer">
 
-    <p>Copyright <?php echo date("Y");?> <?php echo $this->basic_model->getTable('users',['id' => 16],true)->full_name;?>  | Tüm haklar saklıdır.</p>
-    <a href="<?php echo base_url('home/sozlesme')?>" target="_blank" class="foot">Hizmet Sözleşmesi</a>
+    <p>Copyright <?php echo date("Y");?> Editör: Mehmet Emin SAYIM  | Tüm haklar saklıdır.</p>
+    <span><?php $this->load->view("site/_master/modal_footer"); ?></span>
 </div>
 
 
@@ -319,9 +320,9 @@ if (!$redirect) :
 <style>
     .toprak {
 
-        @media only screen and ( max-width: 767px);
+        min-width: 40px;
         padding: 8px 15px;
-
+        opacity:1;
         margin-top: 1px;
         font-family: sans-serif, Verdana;
         font-weight: bold;
@@ -329,6 +330,7 @@ if (!$redirect) :
         color: #dfdfdf;
 
     }
+
 </style>
 
 
@@ -347,7 +349,7 @@ var baseuri2 = '<?php echo base_url('')?>';
                 $('.temayazdir').empty();
                 $.each(data, function( i ){
                     $('.temayazdir').append('<li class="button_a">\n' +
-                        '\t\t\t\t\t<a href="'+data[i].url+'" >'+data[i].title+' <span style="background:#ec6334">'+data[i].kategori_adi+'</span></a><img alt="" class="preview" src="'+baseuri+data[i].img_url+'"></li>')
+                        '\t\t\t\t\t<a  href="'+baseuri2+'?theme='+data[i].title+'" >'+data[i].title+' <span style="background:#ec6334">'+data[i].kategori_adi+'</span></a><img width="500px;" height="300px" alt="" class="preview" src="'+baseuri+data[i].img_url+'"></li>')
                 });
             }
         });

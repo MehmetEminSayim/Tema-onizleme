@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d178f20-ee46-4046-955e-e899c43e7f8d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/panel/application/views/site/_master/modal_footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/panel/application/views/site/live_preview.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/site/live_preview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/assest/site/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/panel/assest/site/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/uploads/01_theme-preview.jpg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +97,11 @@
       <workItem from="1571850134701" duration="11526000" />
       <workItem from="1571923619066" duration="9618000" />
       <workItem from="1571940824619" duration="18842000" />
-      <workItem from="1572001382143" duration="4309000" />
+      <workItem from="1572001382143" duration="5039000" />
+      <workItem from="1572011589458" duration="137000" />
+      <workItem from="1572015758297" duration="1317000" />
+      <workItem from="1572019057380" duration="1660000" />
+      <workItem from="1572031152548" duration="5312000" />
     </task>
     <servers />
   </component>
