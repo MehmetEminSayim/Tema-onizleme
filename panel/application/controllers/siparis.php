@@ -23,6 +23,7 @@ class siparis extends CI_Controller
         $this->load->view("{$viewDate->viewFolder}/{$viewDate->subViewFolder}/index.php", $viewDate);
     }
 
+
     public function delete($id){
 
         $delete =$this->siparis_model->delete(
@@ -50,6 +51,25 @@ class siparis extends CI_Controller
 
         $this->session->set_flashData("alert",$alert);
         redirect(base_url("siparis"));
+    }
+
+    public function detail(){
+
+        $viewData = new stdClass();
+        /** Tablodan veri çekme  */
+        $item = $this->siparis_model->get(
+            array(
+                "id" => $id
+            )
+        );
+
+        /** viev e gönderilecek verilerin set edilmesi */
+        $viewData->viewFolder = $this->viewFolder;
+        $viewData->subViewFolder = "eye";
+        $viewData->item = $item;
+
+
+        $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
     }
 
 

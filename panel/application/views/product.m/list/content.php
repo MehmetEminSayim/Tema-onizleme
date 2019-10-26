@@ -38,7 +38,7 @@
                         <td><i class="fa fa-reorder"></i></td>
                         <td><?php echo $item->id; ?></td>
                         <td> <?php echo $item->title; ?></td>
-                        <td> <?php echo $item->url; ?></td>
+                        <td> <?php echo limit_text($item->url,5); ?></td>
                         <td><?php echo $item->tema_fiyat; ?></td>
                         <td><?php echo $this->basic_model->getTable('kategoriler',['id' => $item->tema_kategori],true)->kategori_adi; ?></td>
 

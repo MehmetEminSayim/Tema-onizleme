@@ -27,7 +27,7 @@
 
                     <div class="row">
                         <div>
-                            <img src="<?php echo base_url("uploads/$item->image") ?>" alt="" class="img-responsive">
+                            <img width="150px" height="150px" src="<?php echo base_url("uploads/$item->image") ?>" alt="" class="img-responsive">
                         </div>
                         <div>
                         <label>Görsel Seçiniz</label>

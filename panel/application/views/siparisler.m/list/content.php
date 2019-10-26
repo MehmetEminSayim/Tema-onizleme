@@ -49,6 +49,8 @@
 
 
                             <td><a href="<?php echo base_url("siparis/delete/$item->id")?>" class="btn btn-sn btn danger "><i class="fa fa-pencil-square-o"></i> Sil</a></td>
+                            <td><a href="<?php echo base_url("siparis/detail/$item->id")?>" class="btn btn-sn btn success "><i class="fa fa-eye"></i> Sipariş Detayı</a></td>
+
 
 
                         </tr>
