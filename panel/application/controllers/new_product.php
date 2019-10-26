@@ -56,24 +56,18 @@ class new_product extends CI_Controller
         {
 
             if ($this->basic_model->insert('products',$_POST)){
+                $folder_name = $this->input->post("title");
+                $path         = "files/$folder_name";
 
-                $alert = array(
-                    "text" =>"Kayıt İşlemi Başarılıdır.",
-                    "type" =>"success"
-                );
-
-            }
-            else{
-
-                $alert = array(
-                    "text" =>"Kayıt İşlemi Başarısızdır.",
-                    "type" =>"error"
-                );
+                $creat=mkdir($path,"0777");
+                if ($creat){
+                    echo "dosya oluştu";
+                }
+                else{
+                    echo "oluşmadı";
+                }
 
             }
-            // İşlemin sonucunu SESSİONA yazma işlemi...
-            $this->session->set_flashData("alert",$alert);
-
             redirect(base_url("new_product"));
 
         }else{
