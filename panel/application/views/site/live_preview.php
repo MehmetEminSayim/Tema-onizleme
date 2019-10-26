@@ -244,20 +244,7 @@ if (!$redirect) :
     </div>
 </div>
 
-<!--whatsap sipariş hattı  -->
-  <!--<script type="text/javascript">
-    (function () {
-        var options = {
-            whatsapp: "+905320000000", // WhatsApp numaranızı buraya girin
-            call_to_action: "Whatsapp Destek ", // Görünecek metin
-            position: "left", // Position may be 'right' or 'left'
-        };
-        var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static." + host;
-        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
-        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
-        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
-    })();
-</script> -->
+
 
 <iframe id="iframe" src="<?php echo $current_theme_url; ?>" frameborder="0" width="100%"></iframe>
 
