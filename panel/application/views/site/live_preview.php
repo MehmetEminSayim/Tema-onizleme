@@ -95,7 +95,6 @@ if (!$redirect) :
     <script type="text/javascript" src=" https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 
-
     <!-- CSS Style -->
     <link rel="stylesheet" href="<?php echo base_url('assest/site/')?>style.css">
 
@@ -193,8 +192,10 @@ if (!$redirect) :
             <a href="#" class="mobileportrait" title="View Mobile Portrait (320x480)"></a>
         </div>
 
-
+        <!-- Modal çekimi -->
         <?php $this->load->view("site/_master/form_m",array('tema' => $current_theme_uniq)); ?>
+
+
 
         <?php if ($this->session->flashdata('success')=='yes'):?>
             <div class="alert alert-success col-md-6" role="alert" style="text-align: center;" >
@@ -206,7 +207,7 @@ if (!$redirect) :
             </div>
         <?php endif;?>
 
-    <?php if ($this->session->flashdata('error')=='no'):?>
+        <?php if ($this->session->flashdata('error')=='no'):?>
             <div class="alert alert-success" role="alert" style="text-align: center;">
                 <strong style="font-size: 22px; font-weight: bold; font-family:Arial, Helvetica, sans-serif;">Tebriklerr! </strong></br>
                 <span style="font-size: 18px; font-weight: bold;">Siparişiniz Başarılı Bir Şekilde Ulaşmıştır.Bizi seçtiğiniz için teşekkür ederiz...</span>
@@ -221,22 +222,30 @@ if (!$redirect) :
                <a id="myBtn"><img src="<?php echo base_url('assest/site/')?>images/purchase.png" alt="Web Design Tunes Themes" > Satın Al <?php echo '₺', $current_theme_fiyat?></a>
 
             </li>
-
-                <a href="<?php echo $current_theme_url; ?>">
-                    <li class="kapat" rel="<?php  ?>"
-                    <a id="myBtn">
-                        <img src="<?php echo base_url('assest/site/')?>images/cross.png" alt="Web Design Tunes Themes" > Kapat
-                    </a>
-                    </li>
-                </a>
-
             <?php endif;?>
+
         </ul>
+        <button  style="background-color: #4CAF50;
+		                border: none;
+		                float: right;
+		                margin-top: 3px;
+		                margin-right: 20px;
+	                    color: white;
+	                    padding: 8px 20px;
+	                    border-radius: 3px;
+	                    text-align: center;
+	                    text-decoration: none;
+	                    display: inline-block;
+	                    font-size: 16px;">
+            <a href="https://api.whatsapp.com/send?phone=905555555555">
+                <img src="<?php echo base_url('assest/site/')?>images/11111.png" > Whatsapp Sipariş
+            </a>
+        </button>
     </div>
 </div>
 
-
-<script type="text/javascript">
+<!--whatsap sipariş hattı  -->
+  <!--<script type="text/javascript">
     (function () {
         var options = {
             whatsapp: "+905320000000", // WhatsApp numaranızı buraya girin
@@ -248,7 +257,7 @@ if (!$redirect) :
         s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
         var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
     })();
-</script>
+</script> -->
 
 <iframe id="iframe" src="<?php echo $current_theme_url; ?>" frameborder="0" width="100%"></iframe>
 

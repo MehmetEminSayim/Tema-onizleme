@@ -37,6 +37,9 @@
     <div class="modal-content col-md-12">
         <span class="close">&times;</span>
 
+
+
+
     <div class="col-md-12">
         <legend style="text-align: center; margin-bottom: 30px; font-size: 24px; font-weight: bold;">
 
@@ -126,7 +129,9 @@
                 ENGİN TUTAR / İŞBANK /     TR75 0011 1000 0000 0038 5585 01<br>
                 ENGİN TUTAR / CEPBANK /    TR75 0011 1000 0000 0038 5585 01<br>
                 E-POSTA ADRESİ : engintutar@gmail.com</p>
-        </div>
+
+            <?php $this->load->view("site/_master/model_in_model",array('tema' => $current_theme_uniq)); ?>
+        </div>z
 
     </div>
 
