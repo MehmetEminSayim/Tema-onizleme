@@ -139,13 +139,35 @@ if (!$redirect) :
 <div id="switcher">
     <div class="center">
         <div class="logo">
-            <a href="<?php echo $this->basic_model->getTable('logo',['id' => 4],true)->image;?>" title="Designing Media Works"><img src="<?php echo base_url('uploads/').$this->basic_model->getTable('logo',['id' => 4],true)->image?>" width="40" height="40" style="margin-top: 5px;" alt="Designing Media Themes" /></a>
+            <a href="<?php echo $this->basic_model->getTable('logo',['id' => 4],true)->image;?>" title="Designing Media Works"><img src="<?php echo base_url('uploads/').$this->basic_model->getTable('logo',['id' => 4],true)->image?>" width="60" height="40" style="margin-top: 5px; border-radius: 2px;" alt="Designing Media Themes" /></a>
+        </div>
+
+        <div style=" min-width: 30px">
+            <select style="background-color: #;
+		                border: none;
+		                float: left;
+		                margin-top: 3px;
+		                opacity:1;
+		                margin-left: 20px;
+	                    color: white;
+	                    padding: 8px 20px;
+	                    border-radius: 3px;
+	                    text-align: center;
+	                    text-decoration: none;
+	                    display: inline-block;
+	                    "
+                    class="toprak" onchange="temegetir(this.value)" >
+                <option>Kategori seçiniz...</option>
+                <?php foreach ($this->basic_model->getTable('kategoriler') as $item){?>
+                    <option value="<?php echo $item->id; ?>"> <?php echo $item->kategori_adi; ?></option>
+                <?php }?>
+            </select>
         </div>
 
 
-
-        <ul style="">
-            <li style="" id="theme_list"><a id="theme_select" href="#">
+<div style="min-width: 10px">
+        <ul style="" class="col-md-2">
+            <li  id="theme_list"><a id="theme_select" href="#">
                     <?php
                     if ($theme_found == false) : echo "Tema Seçiniz..."; else: echo $current_theme_name; endif; ?></a>
                 <ul class="temayazdir">
@@ -171,16 +193,9 @@ if (!$redirect) :
                 </ul>
             </li>
         </ul>
+</div>
 
 
-
-
-        <select style=";"  class="toprak" onchange="temegetir(this.value)" >
-            <option>Kategori seçiniz...</option>
-            <?php foreach ($this->basic_model->getTable('kategoriler') as $item){?>
-                <option value="<?php echo $item->id; ?>"> <?php echo $item->kategori_adi; ?></option>
-            <?php }?>
-        </select>
 
 
 
@@ -222,7 +237,7 @@ if (!$redirect) :
                <a id="myBtn"><img src="<?php echo base_url('assest/site/')?>images/purchase.png" alt="Web Design Tunes Themes" > Satın Al <?php echo '₺', $current_theme_fiyat?></a>
 
             </li>
-            <?php endif;?>
+
 
         </ul>
         <button  style="background-color: #4CAF50;
@@ -241,6 +256,7 @@ if (!$redirect) :
                 <img src="<?php echo base_url('assest/site/')?>images/11111.png" > Whatsapp Sipariş
             </a>
         </button>
+<?php endif;?>
     </div>
 </div>
 
