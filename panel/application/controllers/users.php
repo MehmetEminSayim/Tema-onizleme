@@ -40,8 +40,18 @@ class users extends CI_Controller
 
     public function save()
     {
-        $this->basic_model->insert('users', $_POST);
-        redirect(base_url('users'));
+        if ($this->basic_model->getRow('users',['email' => $_POST['email']])){
+
+            redirect(base_url(''));
+        }else{
+            $data = $_POST;
+            $data['level'] = 'user';
+            $data['pasword'] = md5($data['pasword']);
+            $this->basic_model->insert('users', $data);
+            redirect(base_url(''));
+        }
+
+
     }
 
     public function update_form($id)

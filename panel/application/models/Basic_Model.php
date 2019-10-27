@@ -34,6 +34,14 @@ class Basic_Model extends CI_Model
         return ($row) ?  $query->row() :  $query->result();
     }
 
+    public function getRow($table,$where = array()){
+        $this->db->select('*');
+        $this->db->from($table);
+        if ($where != NULL) { $this->db->where($where); }
+        $query = $this->db->get();
+        return   $query->row();
+    }
+
 
     public function get_productViaCat($kategori){
         $this->db->select('products.*,kategoriler.kategori_adi,kategoriler.id as katid,product_img.img_url,product_img.id as imgid');

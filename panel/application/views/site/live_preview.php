@@ -197,9 +197,6 @@ if (!$redirect) :
 </div>
 
 
-
-
-
        <div class="responsive">
             <a href="#" class="desktop active" title="View Desktop Version"></a>
             <a href="#" class="tabletlandscape" title="View Tablet Landscape (1024x768)"></a>
@@ -210,6 +207,8 @@ if (!$redirect) :
 
         <!-- Modal çekimi -->
         <?php $this->load->view("site/_master/form_m",array('tema' => $current_theme_uniq)); ?>
+        <?php $this->load->view("site/_master/login_site",array('tema' => $current_theme_uniq)); ?>
+        <?php $this->load->view("site/component/user_order"); ?>
 
 
 
@@ -235,8 +234,17 @@ if (!$redirect) :
             <?php if ($current_theme_url || $current_theme_img ):?>
             <li class="purchase" rel="<?php echo $current_theme_purchase_url; ?>">
 
-               <a id="myBtn"><img src="<?php echo base_url('assest/site/')?>images/purchase.png" alt="Web Design Tunes Themes" > Satın Al <?php echo '₺', $current_theme_fiyat?></a>
-
+                <?php if ($this->session->userdata('id')):?>
+                    <a id="myBtn">
+                        <img src="<?php echo base_url('assest/site/')?>images/purchase.png" alt="Web Design Tunes Themes" >
+                        Satın Al <?php echo '₺', $current_theme_fiyat?>
+                    </a>
+                <?php else:?>
+                    <a data-toggle="modal" data-target="#modalLoginForm">
+                        <img src="<?php echo base_url('assest/site/')?>images/purchase.png" alt="Web Design Tunes Themes" >
+                        Satın Al <?php echo '₺', $current_theme_fiyat?>
+                    </a>
+                <?php endif;?>
             </li>
 
 
@@ -247,7 +255,7 @@ if (!$redirect) :
 		                margin-top: 3px;
 		                margin-right: 20px;
 	                    color: white;
-	                    padding: 8px 20px;
+	                    padding: 7px 20px;
 	                    border-radius: 3px;
 	                    text-align: center;
 	                    text-decoration: none;
@@ -257,15 +265,50 @@ if (!$redirect) :
                 <img src="<?php echo base_url('assest/site/')?>images/11111.png" > Whatsapp Sipariş
             </a>
         </button>
+
+        <?php if ($this->session->userdata('id')):?>
+            <div class="btn-group" role="group" >
+                <button style="background-color: #0b8b4b;color: white;font-weight: bold;" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <?php echo $this->session->userdata('full_name');?>
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#" data-toggle="modal" data-target="#modalOrderForm">Siparişlerim</a></li>
+                    <li><a href="<?php echo base_url('userop/logout') ?> ">Çıkış Yap</a></li>
+                </ul>
+            </div>
+    
+        <?php else:?>
+            <div class="text-center">
+                <a style="background-color: #af1d9c;
+		                border: none;
+		                float: right;
+		                margin-top: 3px;
+		                margin-right: 20px;
+	                    color: white;
+	                    padding: 6px 20px;
+	                    border-radius: 3px;
+	                    text-align: center;
+	                    text-decoration: none;
+	                    display: inline-block;
+	                    font-size: 16px;" id="" href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalLoginForm">
+                    Giriş Yap</a>
+            </div>
+        <?php endif;?>
+
+
 <?php endif;?>
     </div>
 </div>
 
     <?php if ($current_theme_url):?>
-<iframe id="iframe" src="<?php echo $current_theme_url; ?>" frameborder="0" width="100%"></iframe>
+                <iframe id="iframe" src="<?php echo $current_theme_url; ?>" frameborder="0" width="100%"></iframe>
+
     <?php elseif ($current_theme_img):?>
-    <iframe id="iframe" src="<?php echo $current_theme_img; ?>" frameborder="0" width="100%;"></iframe>
-    <?php endif;?>
+
+                <iframe id="iframe" src="<?php echo $current_theme_img; ?>"  style="margin-left: 80px;  "  width="100%" scrolling="yes" frameborder="0" ></iframe>
+
+     <?php endif;?>
 
 
 
@@ -296,7 +339,7 @@ if (!$redirect) :
     }
 </style>
 
-<div class="footer">
+<div class="footer" tabindex="1">
 
     <p>Copyright <?php echo date("Y");?> Editör: Mehmet Emin SAYIM  | Tüm haklar saklıdır.</p>
     <span><?php $this->load->view("site/_master/modal_footer"); ?></span>

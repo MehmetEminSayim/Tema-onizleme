@@ -21,6 +21,7 @@ class home extends CI_Controller
 
     function save(){
         $data =  $_POST;
+        $data['satin_alan'] = $this->session->userdata('id');
         unset($data['0']);
 
       $telno = "90".$_POST['telefon_no'];

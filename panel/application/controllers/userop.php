@@ -38,7 +38,12 @@ class userop extends CI_Controller{
                 $sessionData = json_decode(json_encode($oturum), true);
                 $sessionData['is_login'] = 1;
                 $this->session->set_userdata($sessionData);
-               redirect(base_url('admin'));
+                if ($oturum->level == 'admin'){
+                    redirect(base_url('admin'));
+                }elseif($oturum->level == 'user'){
+                    redirect($_SERVER['HTTP_REFERER']);
+                }
+
            }
 
            else{
@@ -55,6 +60,6 @@ class userop extends CI_Controller{
     public function logout(){
         $this->session->sess_destroy();
         $this->session->set_flashdata('login', 'logout');
-        redirect(base_url('login'));
+        redirect(base_url(''));
     }
 }
