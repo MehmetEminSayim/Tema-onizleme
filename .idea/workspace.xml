@@ -2,13 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d178f20-ee46-4046-955e-e899c43e7f8d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/panel/application/views/siparisler.m/eye/content.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/application/views/siparisler.m/eye/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/panel/application/views/site/_master/son_form.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/config/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/controllers/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/controllers/admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/panel/application/controllers/siparis.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/controllers/siparis.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/application/views/logo.m/update/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/logo.m/update/content.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/application/views/product.m/list/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/product.m/list/content.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/application/views/siparisler.m/list/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/siparisler.m/list/content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/views/inculudes/aside.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/inculudes/aside.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/views/product.m/add/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/product.m/add/content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/views/product.m/image/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/product.m/image/content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/views/siparisler.m/eye/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/siparisler.m/eye/content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/views/site/_master/form_m.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/site/_master/form_m.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/views/site/_master/model_in_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/site/_master/model_in_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/views/site/live_preview.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/site/live_preview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/assest/site/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/panel/assest/site/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +43,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/panel/application/views/siparisler.m" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/panel/application/controllers" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
@@ -49,11 +55,11 @@
       <recent name="C:\xampp\htdocs\falay\panel\application\views\site" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\falay\panel\application\views\siparisler.m" />
-      <recent name="C:\xampp\htdocs\falay\panel\application\views\site\_master" />
       <recent name="C:\xampp\htdocs\falay\panel\application\controllers" />
-      <recent name="C:\xampp\htdocs\falay\panel\application\models" />
       <recent name="C:\xampp\htdocs\falay\panel\application\views" />
+      <recent name="C:\xampp\htdocs\falay\panel\application\models" />
+      <recent name="C:\xampp\htdocs\falay\panel\application\views\site\_master" />
+      <recent name="C:\xampp\htdocs\falay\panel\application\libraries" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -105,6 +111,9 @@
       <workItem from="1572019057380" duration="1660000" />
       <workItem from="1572031152548" duration="5840000" />
       <workItem from="1572089870325" duration="16703000" />
+      <workItem from="1572112248978" duration="3000" />
+      <workItem from="1572114905248" duration="10264000" />
+      <workItem from="1572177174987" duration="7750000" />
     </task>
     <servers />
   </component>

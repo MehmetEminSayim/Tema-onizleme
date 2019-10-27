@@ -8,8 +8,12 @@ class admin
 
     public function __construct()
     {
+
         parent::__construct();
         $this->viewFolder="dasbordum.v";
+        if ($this->session->userdata('level') != 'admin'){
+            redirect(base_url('kullanici_paneli'));
+        }
     }
 
     public function index()
