@@ -3,11 +3,13 @@
     .btn-lg {
         position:absolute;
         left:0;
+        background-color: seagreen;
         right:0;
-        margin-left:auto;
+        margin-left:0px;
         margin-right:auto;
-        margin-top:30px;
+        margin-top:px;
     }
+
 
 </style>
 
@@ -24,7 +26,7 @@
 
 <!-- Button trigger modal -->
 <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal1">
-    Launch demo modal
+    Kartla Ödeme
 </button>
 
 <!-- Modal -->

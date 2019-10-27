@@ -54,7 +54,7 @@ color: #fff;
     background:#1a1a1a;
 	border-bottom: 1px solid #353535;
 	z-index: 99999;
-	position: fixed;
+	position: relative;
 	width: 100%;
 }
 
@@ -70,6 +70,7 @@ color: #fff;
 
 #theme_list {
     position: relative;
+
 }
 	
 #theme_select {

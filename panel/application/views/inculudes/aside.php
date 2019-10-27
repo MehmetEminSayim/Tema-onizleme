@@ -58,9 +58,10 @@
 
                     <a href="<?php echo base_url("new_product"); ?>">
                         <i class="menu-icon fa fa-cubes"></i>
-                        <span class="menu-text">Temalar</span>
+                        <span class="menu-text">Ürün Ekle</span>
                     </a>
                 </li>
+
 
                 <li>
                     <a href="<?php echo base_url("users"); ?>">
@@ -93,7 +94,7 @@
 
                 <li>
                     <a href="<?php echo base_url("siparis"); ?>">
-                        <i class="menu-icon zmdi zmdi-lamp zmdi-hc-lg"></i>
+                        <i class="menu-icon menu-icon fa fa-shopping-basket"></i>
                         <span class="menu-text">Gelen Siparişler</span>
                     </a>
                 </li>
