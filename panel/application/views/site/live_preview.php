@@ -60,6 +60,7 @@ if (!$redirect) :
 
             $current_theme_name = ucfirst($theme['id']);
             $current_theme_url = $theme['url'];
+            $current_theme_img = $theme['preview'];
             $current_theme_purchase_url = $theme['ddn'];
             $current_theme_fiyat = $theme['fiyat'];
             $current_theme_uniq = $theme['uniq'];
@@ -231,7 +232,7 @@ if (!$redirect) :
     <?php endif;?>
 
         <ul class="links">
-            <?php if ($current_theme_url):?>
+            <?php if ($current_theme_url || $current_theme_img ):?>
             <li class="purchase" rel="<?php echo $current_theme_purchase_url; ?>">
 
                <a id="myBtn"><img src="<?php echo base_url('assest/site/')?>images/purchase.png" alt="Web Design Tunes Themes" > Satın Al <?php echo '₺', $current_theme_fiyat?></a>
@@ -260,11 +261,12 @@ if (!$redirect) :
     </div>
 </div>
 
-
-
+    <?php if ($current_theme_url):?>
 <iframe id="iframe" src="<?php echo $current_theme_url; ?>" frameborder="0" width="100%"></iframe>
+    <?php elseif ($current_theme_img):?>
+    <iframe id="iframe" src="<?php echo $current_theme_img; ?>" frameborder="0" width="100%;"></iframe>
+    <?php endif;?>
 
-<!-- Large modal -->
 
 
 <!-- Place this tag after the last +1 button tag. -->
