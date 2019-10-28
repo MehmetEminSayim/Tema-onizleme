@@ -27,6 +27,8 @@
 
             </div>
                 <button  class="btn btn-default">Giriş</button>
+                <button  type="button" data-toggle="modal" data-target="#ModalKayitForm" class="btn btn-default pull-right">Kayıt Ol</button>
+
 
             </form>
 
@@ -36,9 +38,16 @@
 
 
         </div>
+
+
+
     </div>
-    <div style=" text-align: center">
-        <?php $this->load->view("site/_master/uye_form_modal"); ?>
-    </div>
+
+
+
 </div>
+
+
+
+
 

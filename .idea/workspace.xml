@@ -4,16 +4,9 @@
     <list default="true" id="4d178f20-ee46-4046-955e-e899c43e7f8d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/panel/application/controllers/new_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/controllers/new_product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/application/views/site/_master/form_m.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/site/_master/form_m.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/views/site/_master/login_site.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/site/_master/login_site.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/views/site/_master/uye_form_modal.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/site/_master/uye_form_modal.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/panel/application/views/site/live_preview.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/site/live_preview.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/uploads/1234.png" beforeDir="false" afterPath="$PROJECT_DIR$/panel/uploads/1234.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/uploads/269638_08f4_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/panel/uploads/269638_08f4_3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/uploads/WhatsApp_Image_2019-10-14_at_15_38_49_-_Kopya.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/uploads/WhatsApp_Image_2019-10-15_at_18_23_081.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/uploads/ci.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/panel/uploads/ci.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/uploads/ci1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/panel/uploads/ci1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/uploads/ci2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/panel/uploads/ci2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/uploads/customers-who-purchase-any-iphone-can-enjoy-one-year-of-apple-tv-for-free-.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/panel/uploads/customers-who-purchase-any-iphone-can-enjoy-one-year-of-apple-tv-for-free-.jpg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -115,6 +108,9 @@
       <workItem from="1572177174987" duration="12009000" />
       <workItem from="1572201688171" duration="11961000" />
       <workItem from="1572262164469" duration="3501000" />
+      <workItem from="1572273595988" duration="1332000" />
+      <workItem from="1572275457268" duration="1084000" />
+      <workItem from="1572280912111" duration="1522000" />
     </task>
     <servers />
   </component>

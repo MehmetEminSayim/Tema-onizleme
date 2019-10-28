@@ -1,18 +1,12 @@
 
 
 
-<button style="margin-left: 700px;" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ModalLoginForm">
-    Yada Kaydol
-</button>
-
-
-
 <!-- Modal HTML Markup -->
-<div id="ModalLoginForm" class="modal fade" >
+<div id="ModalKayitForm" class="modal fade" >
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title">Login</h1>
+                <h1 class="modal-title" style="text-align: center">Kayıt Formu</h1>
             </div>
             <div class="modal-body">
 
@@ -81,7 +75,7 @@
 
 
                     <button type="submit" id="kaydet" class="btn btn-primary btn-md btn-outline">Kaydet</button>
-                    <a href="<?php echo base_url("users"); ?>" class="btn btn-md btn danger ">İptal</a>
+                    <a href="<?php echo base_url(""); ?>" class="btn btn-primary btn-md btn-danger ">İptal</a>
                 </form>
 
             </div>
