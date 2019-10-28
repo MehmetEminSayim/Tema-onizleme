@@ -15,7 +15,7 @@
                 <form data-url="<?php echo base_url("new_product/refresh_image_list/$item->id"); ?>" action="<?php echo base_url("new_product/image_upload/$item->id"); ?>" id="dropzone" class="dropzone" data-plugin="dropzone" enctype="multipart/form-data" data-options="{ url: '<?php echo base_url("new_product/image_upload/$item->id"); ?>'}">
                     <div class="dz-message">
                         <h3 class="m-h-lg">Yüklemek istediğiniz resimleri buraya sürükleyiniz. </h3>
-                        <p class="m-b-lg text-muted">(Resim klasörlerinizden resim seçiniz.)</p>
+                        <p class="m-b-lg text-muted">(Resim boyutlarını büyük yada orta boy seçin aksi taktirde piksel bozulması olabilir..)</p>
                     </div>
                 </form>
 
