@@ -13,6 +13,7 @@ class new_product extends CI_Controller
         $this->load->model("product_image_model");
         $this->load->model("product_model");
         $this->load->model("basic_model");
+        $this->load->library('image_lib');
     }
 
     public function index()
@@ -248,12 +249,25 @@ class new_product extends CI_Controller
                 array(
                     "img_url" => $uploaded_file,
                     "tema_id" => $id
-
                 )
             );
+            $config['image_library'] = 'gd2';
+            $config['source_image'] = './uploads/'.$uploaded_file;
+            $config['wm_type'] = 'overlay';
+            $config['wm_overlay_path'] = './uploads/'. $this->basic_model->getRow('logo')->image;
+            //the overlay image
+            $config['wm_opacity'] = 10;
+            $config['wm_vrt_alignment'] = 'middle';
+            $config['wm_hor_alignment'] = 'center';
+            $this->image_lib->initialize($config);
+            if (!$this->image_lib->watermark()) {
+                echo $this->image_lib->display_errors();
+            } else {
+
+            }
 
         }else{
-            echo "işlem başarısız";
+
         }
     }
 

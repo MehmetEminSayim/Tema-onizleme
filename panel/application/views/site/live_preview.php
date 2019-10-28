@@ -43,6 +43,7 @@ $i = 0;
 foreach ($siteler as $row){
     $theme_array[$i]['id'] = $row->title;
     $theme_array[$i]['url'] = $row->url;
+    $theme_array[$i]['is_image'] = ($row->url == '') ? true : false ;
     $theme_array[$i]['preview'] = base_url('uploads/').$this->basic_model->getTable('product_img',['tema_id' => $row->id],true)->img_url;
     $theme_array[$i]['type'] = $this->basic_model->getTable('kategoriler',['id' => $row->tema_kategori],true)->kategori_adi;
     $theme_array[$i]['type_color'] = "ec6334";
@@ -266,6 +267,11 @@ if (!$redirect) :
             </a>
         </button>
 
+
+
+
+<?php endif;?>
+
         <?php if ($this->session->userdata('id')):?>
             <div class="btn-group" role="group" >
                 <button style="background-color: #0b8b4b;color: white;font-weight: bold;" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -277,7 +283,7 @@ if (!$redirect) :
                     <li><a href="<?php echo base_url('userop/logout') ?> ">Çıkış Yap</a></li>
                 </ul>
             </div>
-    
+
         <?php else:?>
             <div class="text-center">
                 <a style="background-color: #af1d9c;
@@ -295,18 +301,15 @@ if (!$redirect) :
                     Giriş Yap</a>
             </div>
         <?php endif;?>
-
-
-<?php endif;?>
     </div>
 </div>
 
     <?php if ($current_theme_url):?>
                 <iframe id="iframe" src="<?php echo $current_theme_url; ?>" frameborder="0" width="100%"></iframe>
-
     <?php elseif ($current_theme_img):?>
-
-                <iframe id="iframe" src="<?php echo $current_theme_img; ?>"  style="margin-left: 80px;  "  width="100%" scrolling="yes" frameborder="0" ></iframe>
+    <center>
+        <iframe id="iframe" src="<?php echo $current_theme_img; ?>"  style="margin-left: 80px;  "  width="100%" scrolling="yes" frameborder="0" ></iframe>
+    </center>
 
      <?php endif;?>
 
