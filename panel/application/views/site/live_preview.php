@@ -312,11 +312,13 @@ if (!$redirect) :
     <?php if ($current_theme_url):?>
                 <iframe id="iframe" src="<?php echo $current_theme_url; ?>" frameborder="0" width="100%"></iframe>
     <?php elseif ($current_theme_img):?>
-    <center>
-        <iframe id="iframe" src="<?php echo $current_theme_img; ?>"  style="margin-left: 5%;  "  width="100%" scrolling="yes" frameborder="0" ></iframe>
-    </center>
 
-     <?php endif;?>
+
+        <ul>
+            <li style="text-align: center"><img src="<?php echo $current_theme_img; ?>" alt="alt yazısı"  width="80%" height="80%%"></li>
+                    </ul>
+
+    <?php endif;?>
 
 
 
@@ -335,19 +337,19 @@ if (!$redirect) :
 
 <style>
     .footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 7%;
-        background-color: grey;
-        opacity: 0.5;
         color: white;
         text-align: -webkit-center;
+        opacity: 0.8;
+        position:absolute;
+        bottom:0;
+        width:100%;
+        height: 7%;   /* footer yüksekliği */
+        background-color: grey;
+        text-align:center;
     }
 </style>
 
-<div class="footer" tabindex="1">
+<div class="footer" >
 
     <p>Copyright <?php echo date("Y");?> Editör: Mehmet Emin SAYIM  | Tüm haklar saklıdır.</p>
     <span><?php $this->load->view("site/_master/modal_footer"); ?></span>

@@ -145,7 +145,8 @@ color: #fff;
 #iframe {
 	margin: 0 auto;
 	display: block;
-	padding-top: 60px;
+	padding-bottom:44px;
+	padding-top:10px;
 }
 
 .logo {
