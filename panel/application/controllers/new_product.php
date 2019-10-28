@@ -262,6 +262,7 @@ class new_product extends CI_Controller
             $config['height'] = 500;//height to resize to;
             $config['wm_hor_alignment'] = 'center';
             $this->image_lib->initialize($config);
+
             if (!$this->image_lib->watermark()) {
                 echo $this->image_lib->display_errors();
             } else {
