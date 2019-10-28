@@ -141,7 +141,7 @@ if (!$redirect) :
 <div id="switcher">
     <div class="center">
         <div class="logo">
-            <a href="<?php echo $this->basic_model->getTable('logo',['id' => 4],true)->image;?>" title="Designing Media Works"><img src="<?php echo base_url('uploads/').$this->basic_model->getTable('logo',['id' => 4],true)->image?>" width="60" height="40" style="margin-top: 5px; border-radius: 2px;" alt="Designing Media Themes" /></a>
+            <a href="<?php echo $this->basic_model->getTable('logo',['id' => 4],true)->image;?>" ><img src="<?php echo base_url('uploads/').$this->basic_model->getTable('logo',['id' => 4],true)->image?>" width="60" height="40" style="margin-top: 5px; border-radius: 2px;" /></a>
         </div>
 
         <div style=" min-width: 30px">
@@ -210,6 +210,7 @@ if (!$redirect) :
         <?php $this->load->view("site/_master/form_m",array('tema' => $current_theme_uniq)); ?>
         <?php $this->load->view("site/_master/login_site",array('tema' => $current_theme_uniq)); ?>
         <?php $this->load->view("site/component/user_order"); ?>
+        <?php $this->load->view("site/_master/uye_form_modal"); ?>
 
 
 
@@ -284,7 +285,11 @@ if (!$redirect) :
                 </ul>
             </div>
 
+
         <?php else:?>
+
+
+
             <div class="text-center">
                 <a style="background-color: #af1d9c;
 		                border: none;
@@ -308,7 +313,7 @@ if (!$redirect) :
                 <iframe id="iframe" src="<?php echo $current_theme_url; ?>" frameborder="0" width="100%"></iframe>
     <?php elseif ($current_theme_img):?>
     <center>
-        <iframe id="iframe" src="<?php echo $current_theme_img; ?>"  style="margin-left: 80px;  "  width="100%" scrolling="yes" frameborder="0" ></iframe>
+        <iframe id="iframe" src="<?php echo $current_theme_img; ?>"  style="margin-left: 5%;  "  width="100%" scrolling="yes" frameborder="0" ></iframe>
     </center>
 
      <?php endif;?>

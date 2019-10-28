@@ -258,6 +258,8 @@ class new_product extends CI_Controller
             //the overlay image
             $config['wm_opacity'] = 10;
             $config['wm_vrt_alignment'] = 'middle';
+            $config['width'] = 500;//the width to resize to;
+            $config['height'] = 500;//height to resize to;
             $config['wm_hor_alignment'] = 'center';
             $this->image_lib->initialize($config);
             if (!$this->image_lib->watermark()) {
