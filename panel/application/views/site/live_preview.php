@@ -213,25 +213,6 @@ if (!$redirect) :
         <?php $this->load->view("site/_master/uye_form_modal"); ?>
 
 
-
-        <?php if ($this->session->flashdata('success')=='yes'):?>
-            <div class="alert alert-success col-md-6" role="alert" style="text-align: center;" >
-                <strong style="font-size: 22px; font-weight: ; font-family:sans-serif, Verdana;">Tebriklerr! </strong></br>
-                <span style="font-size: 18px; font-weight: ;">
-                    Siparişiniz Başarılı Bir Şekilde Ulaşmıştır.Bizi seçtiğiniz için teşekkür ederiz...
-                </span>
-                <a href="#" class="alert-link"></a>
-            </div>
-        <?php endif;?>
-
-        <?php if ($this->session->flashdata('error')=='no'):?>
-            <div class="alert alert-success" role="alert" style="text-align: center;">
-                <strong style="font-size: 22px; font-weight: bold; font-family:Arial, Helvetica, sans-serif;">Tebriklerr! </strong></br>
-                <span style="font-size: 18px; font-weight: bold;">Siparişiniz Başarılı Bir Şekilde Ulaşmıştır.Bizi seçtiğiniz için teşekkür ederiz...</span>
-                <a href="#" class="alert-link"></a>
-            </div>
-    <?php endif;?>
-
         <ul class="links">
             <?php if ($current_theme_url || $current_theme_img ):?>
             <li class="purchase" rel="<?php echo $current_theme_purchase_url; ?>">
@@ -308,6 +289,21 @@ if (!$redirect) :
         <?php endif;?>
     </div>
 </div>
+
+<?php if ($this->session->flashdata('success')=='yes'):?>
+
+    <div class="alert alert-success" style="text-align: center">
+        <strong>Başarılı!</strong> Siparişiniz bizlere ulaşmıştır ödeme onayından sonra işlemleriniz başlatılacaktır.
+    </div>
+
+<?php endif;?>
+
+<?php if ($this->session->flashdata('error')=='no'):?>
+    <div class="alert alert-danger" style="text-align: center">
+        <strong>Hata!</strong> Üzgünüz siparişte hata ile karşılaşıldı lütfen bilgilerinizi kontrol ediniz.
+    </div>
+
+<?php endif;?>
 
     <?php if ($current_theme_url):?>
                 <iframe id="iframe" src="<?php echo $current_theme_url; ?>" frameborder="0" width="100%"></iframe>
