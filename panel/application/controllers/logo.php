@@ -47,7 +47,7 @@ class logo extends CI_Controller
         $file_name = pathinfo($_FILES["image"]["name"], PATHINFO_FILENAME) . "." . pathinfo($_FILES["image"]["name"], PATHINFO_EXTENSION);
 
         $config["allowed_types"] = "jpg|jpeg|png";
-        $config["upload_path"] = "uploads"; 
+        $config["upload_path"] = "uploads";
         $config["file_name"] = $file_name;
 
         $this->load->library("upload", $config);
