@@ -68,7 +68,7 @@ Ayarları Düzenliyorsunuz...
                                 <?php } ?>
                             </div>
                             <div class="form-group col-md-6">
-                                <label>Telefon Numarası</label>
+                                <label>Whatsapp Telefon</label>
                                 <input required class="form-control" id="exampleInputEmail1" placeholder="" name="telefon_degisim" value="<?php echo $item->telefon_degisim;?>">
                                 <?php if (isset($form_error)) { ?>
                                     <small class="input-form-error"  >
@@ -98,8 +98,47 @@ Ayarları Düzenliyorsunuz...
 
                         <div class="form-group">
                             <label ">Açıklama</label>
-                            <textarea  name="sozlesme_aciklama" class="m-0" data-plugin="summernote" data-options="{height: 250}">
+                            <textarea   name="sozlesme_aciklama" class="m-0" data-plugin="summernote" data-options="{height: 250}">
                                 <?php echo $item->sozlesme_aciklama;?>
+                            </textarea>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>Sözleşme Adı 2</label>
+                            <input required class="form-control"  placeholder="" name="sozlesme_adi2" value="<?php echo $item->sozlesme_adi2;?>">
+                            <?php if (isset($form_error)) { ?>
+                                <small class="input-form-error" >
+                                    <?php echo form_error("sozlesme_adi2"); ?>
+                                </small>
+                            <?php } ?>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label ">Açıklama 2</label>
+                            <textarea   name="sozlesme_aciklama2" class="m-0" data-plugin="summernote" data-options="{height: 250}">
+                                <?php echo $item->sozlesme_aciklama2;?>
+                            </textarea>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <label>Sözleşme Adı 3</label>
+                            <input required class="form-control"  placeholder="" name="sozlesme_adi3" value="<?php echo $item->sozlesme_adi3;?>">
+                            <?php if (isset($form_error)) { ?>
+                                <small class="input-form-error" >
+                                    <?php echo form_error("sozlesme_adi3"); ?>
+                                </small>
+                            <?php } ?>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label ">Açıklama 3</label>
+                            <textarea   name="sozlesme_aciklama3" class="m-0" data-plugin="summernote" data-options="{height: 250}">
+                                <?php echo $item->sozlesme_aciklama3;?>
                             </textarea>
                         </div>
 

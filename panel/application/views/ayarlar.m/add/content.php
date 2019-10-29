@@ -103,6 +103,42 @@
                                 <textarea name="sozlesme_aciklama" class="m-0" data-plugin="summernote" data-options="{height: 250}"></textarea>
                             </div>
 
+                            <!--222222 -->
+
+                            <div class="form-group">
+                                <label>Sözleşme Adı 2</label>
+                                <input required class="form-control"  placeholder="" name="sozlesme_adi2">
+                                <?php if (isset($form_error)) { ?>
+                                    <small class="input-form-error" >
+                                        <?php echo form_error("sozlesme_adi2"); ?>
+                                    </small>
+                                <?php } ?>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label ">Açıklama 2</label>
+                                <textarea name="sozlesme_aciklama2" class="m-0" data-plugin="summernote" data-options="{height: 250}"></textarea>
+                            </div>
+
+                            <!--33333 -->
+
+                            <div class="form-group">
+                                <label>Sözleşme Adı 3</label>
+                                <input required class="form-control"  placeholder="" name="sozlesme_adi3">
+                                <?php if (isset($form_error)) { ?>
+                                    <small class="input-form-error" >
+                                        <?php echo form_error("sozlesme_adi3"); ?>
+                                    </small>
+                                <?php } ?>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label ">Açıklama 3</label>
+                                <textarea name="sozlesme_aciklama3" class="m-0" data-plugin="summernote" data-options="{height: 250}"></textarea>
+                            </div>
+
 
 
                     </div><!-- .tab-pane  -->

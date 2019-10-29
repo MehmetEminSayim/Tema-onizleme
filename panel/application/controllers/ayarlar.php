@@ -56,6 +56,10 @@ class ayarlar extends CI_Controller
                     "telefon_degisim"       => $this->input->post("telefon_degisim"),
                     "sozlesme_adi"          => $this->input->post("sozlesme_adi"),
                     "sozlesme_aciklama"     => $this->input->post("sozlesme_aciklama"),
+                    "sozlesme_adi2"          => $this->input->post("sozlesme_adi2"),
+                    "sozlesme_aciklama2"     => $this->input->post("sozlesme_aciklama2"),
+                    "sozlesme_adi3"          => $this->input->post("sozlesme_adi3"),
+                    "sozlesme_aciklama3"     => $this->input->post("sozlesme_aciklama3"),
                     "banka_bilgi"           => $this->input->post("banka_bilgi"),
                 )
             );
@@ -97,16 +101,24 @@ class ayarlar extends CI_Controller
                 "telefon_degisim"       => $this->input->post("telefon_degisim"),
                 "sozlesme_adi"          => $this->input->post("sozlesme_adi"),
                 "sozlesme_aciklama"     => $this->input->post("sozlesme_aciklama"),
+                "sozlesme_adi2"          => $this->input->post("sozlesme_adi2"),
+                "sozlesme_aciklama2"     => $this->input->post("sozlesme_aciklama2"),
+                "sozlesme_adi3"          => $this->input->post("sozlesme_adi3"),
+                "sozlesme_aciklama3"     => $this->input->post("sozlesme_aciklama3"),
                 "banka_bilgi"           => $this->input->post("banka_bilgi"),
 
             )
         );
+        if ($update){
+            redirect(base_url("ayarlar"));
+        }else{
+            redirect(base_url("update"));
+        }
 
-        redirect(base_url("ayarlar"));
 
     }
 
-    public function delete($id){
+    /*public function delete($id){
 
         $delete =$this->ayarlar_model->delete(
             array(
@@ -133,25 +145,9 @@ class ayarlar extends CI_Controller
 
         $this->session->set_flashData("alert",$alert);
         redirect(base_url("ayarlar"));
-    }
-
-    public function isActiveSetter($id){
+    }*/
 
 
-        if ($id){
-            $aktifmi =($this->input->post("data") ==="true") ? 1 : 0;
-
-            $this->ayarlar_model->update(
-                array(
-                    "id" => $id
-                ),
-                array(
-                    "isActive" => $aktifmi
-                )
-            );
-        }
-
-    }
 
 
 
