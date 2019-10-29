@@ -27,7 +27,7 @@
 
                     <div class="form-group">
 
-                        <label>url</label>
+                        <label>Demo Url</label>
                         <input  class="form-control" id="exampleInputEmail1" placeholder="" name="url">
                         <?php if (isset($form_error)) { ?>
                             <small class="input-form-error" style="font-size:10pt; color:red; font-family:sans-serif, Verdana; font-style: italic"; >

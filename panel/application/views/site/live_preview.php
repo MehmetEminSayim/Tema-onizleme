@@ -220,7 +220,7 @@ if (!$redirect) :
                 <?php if ($this->session->userdata('id')):?>
                     <a id="myBtn">
                         <img src="<?php echo base_url('assest/site/')?>images/purchase.png" alt="Web Design Tunes Themes" >
-                        Satın Al <?php echo '₺', $current_theme_fiyat?>
+                        Satın Al <?php echo $current_theme_fiyat ,'₺'?>
                     </a>
                 <?php else:?>
                     <a data-toggle="modal" data-target="#modalLoginForm">
@@ -244,7 +244,7 @@ if (!$redirect) :
 	                    text-decoration: none;
 	                    display: inline-block;
 	                    font-size: 16px;">
-            <a href="https://api.whatsapp.com/send?phone=905555555555">
+            <a href="https://api.whatsapp.com/send?phone=905303501771">
                 <img src="<?php echo base_url('assest/site/')?>images/11111.png" > Whatsapp Sipariş
             </a>
         </button>
