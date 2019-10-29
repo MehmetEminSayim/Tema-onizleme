@@ -58,7 +58,7 @@
                                 <?php echo form_error("pasword"); ?>
                             </small>
                         <?php } ?>
-                        <span  class="help-block text-danger sifre-uyari">Şifreler Uyuşmuyor</span>
+
 
                     </div>
 

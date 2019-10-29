@@ -16,15 +16,14 @@
                     <table class="table">
                         <tbody>
                         <tr>
-                            <th>Telefon</th><th>İsim:</th><th>Tema adı:</th><th>Ödeme</th>
+                            <th>Telefon</th><th>Tema adı:</th><th>Ödeme</th>
                         </tr>
 
                             <?php foreach ($this->basic_model->getTable('kullanici_bilgileri',['satin_alan' => $this->session->userdata('id')]) as $row ):?>
                                 <tr>
                                     <td><?php echo $row->telefon_no ?></td>
-                                    <td><?php echo $row->adi_soyadi ?> </td>
                                     <td><?php echo $row->tema ?></td>
-                                    <td><?php echo $row->banka_bilgileri ?></td>
+                                    <td><?php echo $row->odeme_tipi ?></td>
 
                                 </tr>
                             <?php endforeach; ?>
