@@ -46,17 +46,20 @@ class ayarlar extends CI_Controller
 
     public function save()
     {
-        if ($this->basic_model->getRow('users',['email' => $_POST['email']])){
+            $this->ayarlar_model->add(
+                array(
+                    "meta1"                 => $this->input->post("meta1"),
+                    "meta2"                 => $this->input->post("meta2"),
+                    "meta3"                 => $this->input->post("meta3"),
+                    "meta4"                 => $this->input->post("meta4"),
+                    "telefon_degisim"       => $this->input->post("telefon_degisim"),
+                    "sozlesme_adi"          => $this->input->post("sozlesme_adi"),
+                    "sozlesme_aciklama"     => $this->input->post("sozlesme_aciklama"),
+                    "banka_bilgi"           => $this->input->post("banka_bilgi"),
+                )
+            );
 
-            redirect(base_url(''));
-        }else{
-            $data = $_POST;
-            $data['level'] = 'user';
-            $data['pasword'] = md5($data['pasword']);
-            $this->basic_model->insert('users', $data);
-            redirect(base_url(''));
-        }
-
+        redirect(base_url("ayarlar"));
 
     }
 
@@ -79,26 +82,6 @@ class ayarlar extends CI_Controller
         $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
     }
 
-    public function update_pasword_form($id)
-    {
-        $viewData = new stdClass();
-        /** Tablodan veri çekme  */
-        $item = $this->ayarlar_model->get(
-            array(
-                "id" => $id
-            )
-        );
-
-        /** viev e gönderilecek verilerin set edilmesi */
-        $viewData->viewFolder = $this->viewFolder;
-        $viewData->subViewFolder = "pasword";
-        $viewData->item = $item;
-        $viewData->jsSet = '<script src="'.base_url().'assest/assets/js/passwordmatch.js"></script>';
-
-
-        $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
-    }
-
     public function update($id)
     {
 
@@ -110,25 +93,6 @@ class ayarlar extends CI_Controller
                 "user_name" => $this->input->post("user_name"),
                 "full_name" => $this->input->post("full_name"),
                 "email" => $this->input->post("email"),
-                "pasword" => md5($this->input->post("pasword")),
-
-            )
-        );
-
-        $this->session->set_flashData("alert", $alert);
-        redirect(base_url("ayarlar"));
-
-    }
-   
-
-    public function update_pasword($id)
-    {
-
-        $update = $this->ayarlar_model->update(
-            array(
-                "id" => $id
-            ),
-            array(
                 "pasword" => md5($this->input->post("pasword")),
 
             )

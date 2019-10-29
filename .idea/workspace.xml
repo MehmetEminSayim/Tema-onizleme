@@ -115,7 +115,7 @@
       <workItem from="1572303083627" duration="17000" />
       <workItem from="1572352150445" duration="511000" />
       <workItem from="1572352801659" duration="3399000" />
-      <workItem from="1572362393468" duration="4515000" />
+      <workItem from="1572362393468" duration="9815000" />
     </task>
     <servers />
   </component>
@@ -145,6 +145,11 @@
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/panel/application/controllers/Card.php</url>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/panel/application/views/ayarlar.m/add/content.php</url>
+          <line>30</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
