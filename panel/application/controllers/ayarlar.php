@@ -16,8 +16,9 @@ class ayarlar extends CI_Controller
 
     public function index()
     {
+
         $viewDate = new stdClass();
-        $items = $this->basic_model->getTable('site_ayarlari');
+        $items = $this->basic_model->getRow('site_ayarlari',['id' => 0]);
         if ($items)
             $viewDate->subViewFolder = "update";
         else
@@ -25,7 +26,7 @@ class ayarlar extends CI_Controller
 
         $viewDate->viewFolder = $this->viewFolder;
 
-
+        $viewDate->item = $items;
         $this->load->view("{$viewDate->viewFolder}/{$viewDate->subViewFolder}/index.php", $viewDate);
     }
 
@@ -63,23 +64,22 @@ class ayarlar extends CI_Controller
 
     }
 
-    public function update_form($id)
-    {
-        $viewData = new stdClass();
-        /** Tablodan veri çekme  */
-        $item = $this->ayarlar_model->get(
-            array(
-                "id" => $id
-            )
-        );
+    public function update_form($id){
 
-        /** viev e gönderilecek verilerin set edilmesi */
+        $viewData = new stdClass();
+
+        /** Tablodan Verilerin Getirilmesi.. */
+        $item = $this->basic_model->getRow('site_ayarlari');
+
+
+        /** View'e gönderilecek Değişkenlerin Set Edilmesi.. */
         $viewData->viewFolder = $this->viewFolder;
         $viewData->subViewFolder = "update";
         $viewData->item = $item;
 
-
         $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
+
+
     }
 
     public function update($id)
@@ -90,15 +90,18 @@ class ayarlar extends CI_Controller
                 "id" => $id
             ),
             array(
-                "user_name" => $this->input->post("user_name"),
-                "full_name" => $this->input->post("full_name"),
-                "email" => $this->input->post("email"),
-                "pasword" => md5($this->input->post("pasword")),
+                "meta1"                 => $this->input->post("meta1"),
+                "meta2"                 => $this->input->post("meta2"),
+                "meta3"                 => $this->input->post("meta3"),
+                "meta4"                 => $this->input->post("meta4"),
+                "telefon_degisim"       => $this->input->post("telefon_degisim"),
+                "sozlesme_adi"          => $this->input->post("sozlesme_adi"),
+                "sozlesme_aciklama"     => $this->input->post("sozlesme_aciklama"),
+                "banka_bilgi"           => $this->input->post("banka_bilgi"),
 
             )
         );
 
-        $this->session->set_flashData("alert", $alert);
         redirect(base_url("ayarlar"));
 
     }

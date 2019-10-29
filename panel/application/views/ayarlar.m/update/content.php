@@ -1,61 +1,129 @@
 <div class="col-md-12">
     <h4 class="m-b-lg">
-        Kaydı Düzenle
+Ayarları Düzenliyorsunuz...
     </h4>
 </div>
 
-<div class="row">
-    <div class="col-md-12">
+<div class="col-md-12">
+    <form action="<?php echo base_url("ayarlar/update/$item->id"); ?>" method="post" enctype="multipart/form-data">
         <div class="widget">
-            <div class="widget-body">
-
-                <form action="<?php echo base_url("users/update/$item->id"); ?>" method="post">
-
-                    <div class="form-group">
-
-                        <label>Kullanıcı Adı</label>
-                        <input required class="form-control" name="user_name"  value="<?php echo $item->user_name ?>">
-                        <?php if (isset($form_error)) { ?>
-                            <small class="input-form-error" style="font-size:10pt; color:red; font-family:sans-serif, Verdana; font-style: italic"; >
-                                <?php echo form_error("user_name"); ?>
-                            </small>
-                        <?php } ?>
-
-                    </div>
-
-                    <div class="form-group">
-
-                        <label>Ad Soyad</label>
-                        <input required class="form-control" name="full_name" value="<?php echo $item->full_name ?>">
-                        <?php if (isset($form_error)) { ?>
-                            <small class="input-form-error" style="font-size:10pt; color:red; font-family:sans-serif, Verdana; font-style: italic"; >
-                                <?php echo form_error("full_name"); ?>
-                            </small>
-                        <?php } ?>
-
-                    </div>
-
-                    <div class="form-group">
-
-                        <label>E-posta</label>
-                        <input required  class="form-control"  name="email" value="<?php echo $item->email ?>">
-                        <?php if (isset($form_error)) { ?>
-                            <small class="input-form-error" style="font-size:10pt; color:red; font-family:sans-serif, Verdana; font-style: italic"; >
-                                <?php echo form_error("email"); ?>
-                            </small>
-                        <?php } ?>
-
-                    </div>
+            <div class="m-b-lg nav-tabs-horizontal">
+                <!-- tabs list -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" ><a href="#tab-1" aria-controls="tab-1" role="tab" data-toggle="tab">Site Bilgileri</a></li>
+                    <li role="presentation"><a href="#tab-2"  aria-controls="tab-2" role="tab" data-toggle="tab">Sözleşme Ekle</a></li>
+                    <li role="presentation"><a href="#tab-3"  aria-controls="tab-3" role="tab" data-toggle="tab">Banka Hesap Bilgileri</a></li>
+                </ul><!-- .nav-tabs -->
 
 
+                <!-- Tab panes -->
+                <div class="tab-content p-md">
+
+                    <div role="tabpanel" class="tab-pane in active fade" id="tab-1">
+                        <h4 class="m-b-md">Site Metaları</h4>
+                        <div class="row ">
+
+                            <div class="form-group col-md-6">
+                                <label>Meta Adı 1</label>
+                                <input required  name="meta1" class="form-control" value="<?php echo $item->meta1; ?> ">
+                                <?php if (isset($form_error)) { ?>
+                                    <small class="input-form-error">
+                                        <?php echo form_error("meta1"); ?>
+                                    </small>
+                                <?php } ?>
+                            </div>
+
+
+                            <div class="form-group col-md-6">
+                                <label>Meta Adı 2</label>
+                                <input required class="form-control" id="exampleInputEmail1" placeholder="" name="meta2" value="<?php echo $item->meta2;?>">
+                                <?php if (isset($form_error)) { ?>
+                                    <small class="input-form-error" >
+                                        <?php echo form_error("meta2"); ?>
+                                    </small>
+                                <?php } ?>
+                            </div>
+                        </div>
+                        <div class="row" >
+
+                            <div class="form-group col-md-6" >
+                                <label>Meta Adı 3</label>
+                                <input required class="form-control" id="exampleInputEmail1" placeholder="" name="meta3" value="<?php echo $item->meta3;?>">
+                                <?php if (isset($form_error)) { ?>
+                                    <small class="input-form-error"  >
+                                        <?php echo form_error("meta3"); ?>
+                                    </small>
+                                <?php } ?>
+                            </div>
 
 
 
-                    <button type="submit" class="btn btn-primary btn-md btn-outline">Güncelle</button>
-                    <a href="<?php echo base_url("users"); ?>" class="btn btn-md btn danger ">İptal</a>
-                </form>
-            </div>
-        </div>
+                            <div class="form-group col-md-6">
+                                <label>Meta Adı 4</label>
+                                <input required class="form-control" id="exampleInputEmail1" placeholder="" name="meta4" value="<?php echo $item->meta4;?>">
+                                <?php if (isset($form_error)) { ?>
+                                    <small class="input-form-error" >
+                                        <?php echo form_error("meta4"); ?>
+                                    </small>
+                                <?php } ?>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Telefon Numarası</label>
+                                <input required class="form-control" id="exampleInputEmail1" placeholder="" name="telefon_degisim" value="<?php echo $item->telefon_degisim;?>">
+                                <?php if (isset($form_error)) { ?>
+                                    <small class="input-form-error"  >
+                                        <?php echo form_error("telefon_degisim"); ?>
+                                    </small>
+                                <?php } ?>
+                            </div>
+                        </div>
 
-    </div>
-</div>
+                    </div><!-- .tab-pane  -->
+
+                    <div role="tabpanel" class="tab-pane fade" id="tab-2">
+                        <h4 class="m-b-md">Sözleşme Ekle</h4>
+
+
+
+                        <div class="form-group">
+                            <label>Sözleşme Adı</label>
+                            <input required class="form-control"  placeholder="" name="sozlesme_adi" value="<?php echo $item->sozlesme_adi;?>">
+                            <?php if (isset($form_error)) { ?>
+                                <small class="input-form-error" >
+                                    <?php echo form_error("sozlesme_adi"); ?>
+                                </small>
+                            <?php } ?>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label ">Açıklama</label>
+                            <textarea  name="sozlesme_aciklama" class="m-0" data-plugin="summernote" data-options="{height: 250}">
+                                <?php echo $item->sozlesme_aciklama;?>
+                            </textarea>
+                        </div>
+
+
+
+                    </div><!-- .tab-pane  -->
+
+                    <div role="tabpanel" class="tab-pane fade" id="tab-3">
+                        <h4 class="m-b-md">Banka Hesap Bilgileri</h4>
+                        <div class="form-group">
+                            <label ">Açıklama</label>
+                            <textarea name="banka_bilgi" class="m-0" data-plugin="summernote" data-options="{height: 250}">
+                                <?php echo $item->banka_bilgi;?>
+                            </textarea>
+                        </div>
+                    </div><!-- .tab-content  -->
+
+                </div>
+
+
+            </div><!-- .nav-tabs-horizontal -->
+        </div><!-- .widget -->
+
+        <button type="submit" class="btn btn-primary btn-md">Güncelle</button>
+        <a href="<?php echo base_url("ayarlar"); ?>" class="btn btn-md btn-danger">İptal</a>
+    </form>
+</div><!-- END column -->

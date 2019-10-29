@@ -4,7 +4,8 @@
     <list default="true" id="4d178f20-ee46-4046-955e-e899c43e7f8d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/panel/application/controllers/ayarlar.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/controllers/ayarlar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/application/views/ayarlar.m/add/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/ayarlar.m/add/content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/controllers/logo.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/controllers/logo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/views/ayarlar.m/update/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/ayarlar.m/update/content.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -115,7 +116,7 @@
       <workItem from="1572303083627" duration="17000" />
       <workItem from="1572352150445" duration="511000" />
       <workItem from="1572352801659" duration="3399000" />
-      <workItem from="1572362393468" duration="9815000" />
+      <workItem from="1572362393468" duration="12813000" />
     </task>
     <servers />
   </component>
