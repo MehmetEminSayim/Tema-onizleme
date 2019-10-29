@@ -34,7 +34,7 @@
 
 <div id="myModal" class="modal">
     <!-- Modal content -->
-    <div class="modal-content col-md-12" ">
+    <div class="modal-content col-md-12">
         <span class="close">&times;</span>
 
 
@@ -108,15 +108,9 @@
         </div>
         <div id="ortala" class="col-md-6">
             <h5 style="text-align: center; font-size: 24px; font-family: sans-serif, Verdana;">Havale İle Ödeme</h5>
-            <p style="text-align: center; padding: 20px; line-height: 25px; font-weight: bold;">Havale İle Ödeme
-                Banka havalesi ile ödemek için açıklama kısmına ürünün adını yazarak aşağıda belirtilen hesap numarasına tutarı ödeyiniz.
-                Ödeme dekontunu ve sipariş bilgilerinizi (adres, isim, telefon) aşağıda belirtilen e-posta adresine iletiniz.
-                Ödeme teyidi alındıktan sonra temanız web sitenizde aktif olacaktır.<br>
-                ENGİN TUTAR / FINANSBANK / TR75 0011 1000 0000 0038 5585 01<br>
-                ENGİN TUTAR / ZİRAATBANK / TR75 0011 1000 0000 0038 5585 01<br>
-                ENGİN TUTAR / İŞBANK /     TR75 0011 1000 0000 0038 5585 01<br>
-                ENGİN TUTAR / CEPBANK /    TR75 0011 1000 0000 0038 5585 01<br>
-                E-POSTA ADRESİ : engintutar@gmail.com</p>
+            <span style="text-align: center; padding: 20px; line-height: 25px; font-weight: bold;">
+                <?php echo $this->basic_model->getRow('site_ayarlari',['id' => 0])->banka_bilgi ?>
+            </span>
 
 
 
