@@ -90,7 +90,10 @@ if (!$redirect) :
     <title>Designing Media Works | Item : <?php if ($theme_found == false) : echo $current_theme_name; else: echo $current_theme_name; endif; ?></title>
 
     <!-- Mobile Specific -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="viewport" content=" <?php echo $this->basic_model->getRow('site_ayarlari',['id' => 0])->meta1 ?>" />
+    <meta name="viewport" content=" <?php echo $this->basic_model->getRow('site_ayarlari',['id' => 0])->meta2 ?>" />
+    <meta name="viewport" content=" <?php echo $this->basic_model->getRow('site_ayarlari',['id' => 0])->meta3 ?>" />
+    <meta name="viewport" content=" <?php echo $this->basic_model->getRow('site_ayarlari',['id' => 0])->meta4 ?>" />
 
     <!--Bootstrap entegresi -->
     <script type="text/javascript" src=" https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -208,6 +211,7 @@ if (!$redirect) :
 
         <!-- Modal çekimi -->
         <?php $this->load->view("site/_master/form_m",array('tema' => $current_theme_uniq)); ?>
+        <?php $this->load->view("site/_master/form_m2",array('tema' => $current_theme_uniq)); ?>
         <?php $this->load->view("site/_master/login_site",array('tema' => $current_theme_uniq)); ?>
         <?php $this->load->view("site/component/user_order"); ?>
         <?php $this->load->view("site/_master/uye_form_modal"); ?>
@@ -223,7 +227,7 @@ if (!$redirect) :
                         Satın Al <?php echo $current_theme_fiyat ,'₺'?>
                     </a>
                 <?php else:?>
-                    <a data-toggle="modal" data-target="#modalLoginForm">
+                    <a data-toggle="modal" data-target="#myModal2">
                         <img src="<?php echo base_url('assest/site/')?>images/purchase.png" alt="Web Design Tunes Themes" >
                         Satın Al <?php echo '₺', $current_theme_fiyat?>
                     </a>
@@ -244,7 +248,7 @@ if (!$redirect) :
 	                    text-decoration: none;
 	                    display: inline-block;
 	                    font-size: 16px;">
-            <a href="https://api.whatsapp.com/send?phone=905303501771">
+            <a href="https://api.whatsapp.com/send?phone=90+<?php echo $this->basic_model->getRow('site_ayarlari',['id' => 0])->telefon_degisim ?>">
                 <img src="<?php echo base_url('assest/site/')?>images/11111.png" > Whatsapp Sipariş
             </a>
         </button>
@@ -349,6 +353,8 @@ if (!$redirect) :
 
     <p>Copyright <?php echo date("Y");?> Editör: Mehmet Emin SAYIM  | Tüm haklar saklıdır.</p>
     <span><?php $this->load->view("site/_master/modal_footer"); ?></span>
+    <span><?php $this->load->view("site/_master/modal_footer2"); ?></span>
+    <span><?php $this->load->view("site/_master/modal_footer3"); ?></span>
 </div>
 
 

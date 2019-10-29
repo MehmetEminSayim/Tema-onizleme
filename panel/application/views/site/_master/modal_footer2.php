@@ -1,6 +1,6 @@
 <!-- Button trigger modal -->
 <span  data-toggle="modal" data-target="#exampleModal">
-  <?php echo $this->basic_model->getRow('site_ayarlari',['id' => 0])->sozlesme_adi ?>
+    <?php echo $this->basic_model->getRow('site_ayarlari',['id' => 0])->sozlesme_adi2 ?>
 </span>
 
 <!-- Modal -->
@@ -8,7 +8,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content" style="color: #0b0b0b;">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">  Hizmet Sözleşmesi</h5>
+                <h5 class="modal-title" id="exampleModalLabel">  Satış Sözleşmesi</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -17,7 +17,7 @@
                 <legend style="text-align: center; margin-bottom: 30px; font-size: 24px; font-weight: bold;">
                     Hizmet Sözleşmesi
                 </legend>
-                <?php echo $this->basic_model->getRow('site_ayarlari',['id' => 0])->sozlesme_aciklama ?>
+                <?php echo $this->basic_model->getRow('site_ayarlari',['id' => 0])->sozlesme_aciklama2 ?>
 
             </div>
         </div>
