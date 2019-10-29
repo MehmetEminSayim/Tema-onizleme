@@ -24,7 +24,7 @@ class ayarlar extends CI_Controller
             $viewDate->subViewFolder = "no_content";
 
         $viewDate->viewFolder = $this->viewFolder;
-       
+
 
         $this->load->view("{$viewDate->viewFolder}/{$viewDate->subViewFolder}/index.php", $viewDate);
     }
