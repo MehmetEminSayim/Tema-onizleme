@@ -55,10 +55,25 @@
 
 
                 <li>
+                    <a href="<?php echo base_url("kategori"); ?>">
+                        <i class="menu-icon fa fa-ellipsis-v"></i>
+                        <span class="menu-text">Kategoriler</span>
+                    </a>
+                </li>
+
+                <li>
 
                     <a href="<?php echo base_url("new_product"); ?>">
                         <i class="menu-icon fa fa-cubes"></i>
-                        <span class="menu-text">Ürün Ekle</span>
+                        <span class="menu-text">Tema Ekle</span>
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="<?php echo base_url("siparis"); ?>">
+                        <i class="menu-icon menu-icon fa fa-shopping-basket"></i>
+                        <span class="menu-text">Siparişler</span>
                     </a>
                 </li>
 
@@ -77,27 +92,23 @@
                     </a>
                 </li>
 
-                <li>
-                    <a href="<?php echo base_url("kategori"); ?>">
-                        <i class="menu-icon fa fa-ellipsis-v"></i>
-                        <span class="menu-text">Kategoriler</span>
-                    </a>
-                </li>
+
 
 
                 <li>
                     <a href="<?php echo base_url("logo"); ?>">
                         <i class="menu-icon zmdi zmdi-lamp zmdi-hc-lg"></i>
-                        <span class="menu-text">Logo Ekle</span>
+                        <span class="menu-text">Logo Ayarlar</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo base_url("siparis"); ?>">
-                        <i class="menu-icon menu-icon fa fa-shopping-basket"></i>
-                        <span class="menu-text">Gelen Siparişler</span>
+                    <a href="<?php echo base_url("ayarlar"); ?>">
+                        <i class="menu-icon zmdi zmdi-lamp zmdi-hc-lg"></i>
+                        <span class="menu-text">Genel Ayarlar</span>
                     </a>
                 </li>
+
 
 
 
