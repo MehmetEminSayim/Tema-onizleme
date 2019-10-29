@@ -64,6 +64,73 @@ class home extends CI_Controller
        }
     }
 
+    function save2(){
+             $udata['full_name'] = $_POST['full_name'];
+             $udata['email'] = $_POST['email'];
+             $udata['pasword'] = md5($_POST['pasword']);
+             $udata['level'] = 'user';
+
+             $odata['telefon_no'] = $_POST['telefon_no'];
+             $odata['sozlesme_kabul'] = $_POST['sozlesme_kabul'];
+             $odata['tema'] = $_POST['tema'];
+             $odata['domain'] = $_POST['domain'];
+             $odata['ns_alanı'] = $_POST['ns_alanı'];
+             $odata['odeme_tipi'] = $_POST['odeme_tipi'];
+
+
+        if ($this->basic_model->getRow('users',['email' => $_POST['email']])){
+            redirect(base_url(''));
+        }else{
+            $this->basic_model->insert('users', $udata);
+            $userID = $this->db->insert_id() ;
+        }
+
+        $odata['satin_alan'] = $userID;
+        $odata['telefon_no'] = "90".$odata['telefon_no'];
+
+        if ($this->basic_model->insert('kullanici_bilgileri',$odata)){
+
+            /**
+            try {
+               $client = new SoapClient("http://soap.netgsm.com.tr:8080/Sms_webservis/SMS?wsdl");
+
+               $msg  = 'test message';
+               $gsm  = array($telno);
+
+
+               $Result = $client -> smsGonder1NV2(
+                   array(
+                       'username'=>'08503041749',
+                       'password' => 'Ct7354095',
+                       'header' => '5305011771',
+                       'msg' => 'TEST',
+                       'gsm' => $gsm,
+                       'filter' => '',
+                       'startdate'  => '',
+                       'stopdate'  => '',
+                       'encoding' => ''  )
+                        );
+
+           } catch (Exception $exc)
+           {
+               // Hata olusursa yakala
+               echo "Soap Hatasi Olustu: " . $exc->getMessage();
+           }*/
+            $this->session->set_flashData('success','yes');
+            $oturum = $this->basic_model->getTable('users',['id' => $userID],true);
+            $sessionData = json_decode(json_encode($oturum), true);
+            $sessionData['is_login'] = 1;
+            $this->session->set_userdata($sessionData);
+            redirect(base_url(''));
+
+       }
+       else{
+           $this->session->set_flashData('error','no');
+           redirect(base_url("error"));
+
+       }
+    }
+
     function urun_tema(){
         $tema = $_POST['temaid'];
 

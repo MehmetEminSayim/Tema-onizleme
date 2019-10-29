@@ -32,7 +32,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 
-<div id="myModal" class="modal">
+<div id="myModal2" class="modal">
     <!-- Modal content -->
     <div class="modal-content col-md-12" ">
         <span class="close">&times;</span>
@@ -48,9 +48,44 @@
 
         <div id="ortala" class="col-md-6">
 
-            <form class="form-horizontal" style="position: center;" action="<?php echo base_url("home/save"); ?>" method="post" enctype="multipart/form-data">
+            <form class="form-horizontal" style="position: center;" action="<?php echo base_url("home/save2"); ?>" method="post" enctype="multipart/form-data">
                 <fieldset>
 
+                    <div class="form-group">
+
+
+                        <input required class="form-control" id="exampleInputEmail1" placeholder="Ad Soyad" name="full_name">
+                        <?php if (isset($form_error)) { ?>
+                            <small class="input-form-error" style="font-size:10pt; color:red; font-family:sans-serif, Verdana; font-style: italic"; >
+                                <?php echo form_error("full_name"); ?>
+                            </small>
+                        <?php } ?>
+
+                    </div>
+
+                    <div class="form-group">
+
+
+                        <input required  class="form-control"  name="email" placeholder="E-posta">
+                        <?php if (isset($form_error)) { ?>
+                            <small class="input-form-error" style="font-size:10pt; color:red; font-family:sans-serif, Verdana; font-style: italic"; >
+                                <?php echo form_error("email"); ?>
+                            </small>
+                        <?php } ?>
+
+                    </div>
+
+                    <div class="form-group">
+
+
+                        <input required class="form-control" id="pass1" name="pasword" placeholder="Sifre">
+                        <?php if (isset($form_error)) { ?>
+                            <small class="input-form-error" style="font-size:10pt; color:red; font-family:sans-serif, Verdana; font-style: italic"; >
+                                <?php echo form_error("pasword"); ?>
+                            </small>
+                        <?php } ?>
+
+                    </div>
 
                     <div class="form-group">
                         <div class="col-md-12">
