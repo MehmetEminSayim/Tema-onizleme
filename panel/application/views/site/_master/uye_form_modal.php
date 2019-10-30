@@ -6,77 +6,33 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title" style="text-align: center">Kayıt Formu</h1>
+                <h1 class="modal-title" style="text-align: center">Sifremi Unuttum</h1>
             </div>
             <div class="modal-body">
 
 
-                <form action="<?php echo base_url("users/save"); ?>" method="post">
+                <div class="simple-page-wrap">
+                    <div class="simple-page-logo animated swing">
+                        <a href="index.html">
+                            <span><i class="fa fa-gg"></i></span>
+                            <span>Infinity</span>
+                        </a>
+                    </div><!-- logo -->
+                    <div class="simple-page-form animated flipInY" id="reset-password-form">
+                        <h4 class="form-title m-b-xl text-center">Lütfen mail adresinizi giriniz</h4>
 
-                    <div class="form-group">
+                        <form action="<?php echo base_url("sifremi-sifirla") ?>" method="post">
+                            <div class="form-group">
+                                <input id="reset-password-email" type="email" class="form-control" placeholder="email">
+                            </div>
 
+                            <button class="btn btn-outline">Sifremi Sıfırla</button>
+                        </form>
+                    </div><!-- #reset-password-form -->
 
-                        <input required class="form-control" id="exampleInputEmail1" placeholder="Kullanıcı adı" name="user_name">
-                        <?php if (isset($form_error)) { ?>
-                            <small class="input-form-error" style="font-size:10pt; color:red; font-family:sans-serif, Verdana; font-style: italic"; >
-                                <?php echo form_error("user_name"); ?>
-                            </small>
-                        <?php } ?>
-
-                    </div>
-
-                    <div class="form-group">
-
-
-                        <input required class="form-control" id="exampleInputEmail1" placeholder="Ad Soyad" name="full_name">
-                        <?php if (isset($form_error)) { ?>
-                            <small class="input-form-error" style="font-size:10pt; color:red; font-family:sans-serif, Verdana; font-style: italic"; >
-                                <?php echo form_error("full_name"); ?>
-                            </small>
-                        <?php } ?>
-
-                    </div>
-
-                    <div class="form-group">
+                </div><!-- .simple-page-wrap -->
 
 
-                        <input required  class="form-control"  name="email" placeholder="E-posta">
-                        <?php if (isset($form_error)) { ?>
-                            <small class="input-form-error" style="font-size:10pt; color:red; font-family:sans-serif, Verdana; font-style: italic"; >
-                                <?php echo form_error("email"); ?>
-                            </small>
-                        <?php } ?>
-
-                    </div>
-
-                    <div class="form-group">
-
-
-                        <input required class="form-control" id="pass1" name="pasword" placeholder="Sifre">
-                        <?php if (isset($form_error)) { ?>
-                            <small class="input-form-error" style="font-size:10pt; color:red; font-family:sans-serif, Verdana; font-style: italic"; >
-                                <?php echo form_error("pasword"); ?>
-                            </small>
-                        <?php } ?>
-
-
-                    </div>
-
-                    <div class="form-group">
-
-                        <input required class="form-control" id="pass2" name="" placeholder="Sifre tekrar">
-                        <?php if (isset($form_error)) { ?>
-                            <small class="input-form-error" style="font-size:10pt; color:red; font-family:sans-serif, Verdana; font-style: italic"; >
-                                <?php echo form_error(""); ?>
-                            </small>
-                        <?php } ?>
-
-                    </div>
-
-
-                    <button type="submit" id="kaydet" class="btn btn-primary btn-md btn-outline">Kaydet</button>
-                    <a href="<?php echo base_url(""); ?>" class="btn btn-primary btn-md btn-danger ">İptal</a>
-                </form>
 
             </div>
         </div><!-- /.modal-content -->

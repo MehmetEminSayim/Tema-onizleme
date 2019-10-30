@@ -27,7 +27,7 @@
 
             </div>
                 <button  class="btn btn-default">Giriş</button>
-                <button  type="button" data-toggle="modal" data-target="#ModalKayitForm" class="btn btn-default pull-right">Kayıt Ol</button>
+                <button  type="button" data-toggle="modal" data-target="#ModalKayitForm" class="btn btn-default pull-right">Sifremi Unuttum</button>
 
 
             </form>
