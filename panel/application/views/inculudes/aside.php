@@ -85,15 +85,6 @@
                     </a>
                 </li>
 
-                <li>
-                    <a href="<?php echo base_url("contract"); ?>">
-                        <i class="menu-icon fa fa-arrows"></i>
-                        <span class="menu-text">Sözleşmeler</span>
-                    </a>
-                </li>
-
-
-
 
                 <li>
                     <a href="<?php echo base_url("logo"); ?>">
