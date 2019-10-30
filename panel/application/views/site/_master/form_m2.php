@@ -147,10 +147,6 @@
             <span style="text-align: center; padding: 20px; line-height: 25px; font-weight: bold;">
                 <?php echo $this->basic_model->getRow('site_ayarlari',['id' => 0])->banka_bilgi ?>
             </span>
-
-
-
-
         </div>
 
 

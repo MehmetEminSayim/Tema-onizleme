@@ -25,6 +25,7 @@ class userop extends CI_Controller{
         $this->load->view("{$viewDate->viewFolder}/{$viewDate->subViewFolder}/index.php", $viewDate);
 
     }
+
     public function do_login(){
 
 
@@ -61,5 +62,36 @@ class userop extends CI_Controller{
         $this->session->sess_destroy();
         $this->session->set_flashdata('login', 'logout');
         redirect(base_url(''));
+    }
+
+    public function send_mail(){
+        $mailayar = $this->basic_model->getRow('mail_ayar',['id' => 1]);
+
+        $config = array(
+            "protocol"   => "smtp",
+            "smtp_host"  => $mailayar->host,
+            "smtp_port"  => $mailayar->port,
+            "smtp_user"  => $mailayar->mail,
+            "smtp_pass"  => $mailayar->password,
+            "starttls"   => true,
+            "charset"    => "utf-8",
+            "mailtype"   => "html",
+            "wordwrap"   => true,
+            "newline"    => "\r\n"
+        );
+        $this->load->library("email",$config);
+        $this->email->from("xxxxx@gmail.com", $mailayar->sender_name);
+        $this->email->to("mehmin3589@gmail.com");
+        $this->email->subject("Fbar bilgilendirme");
+        $this->email->message("Üyeliğiniz aktif olmuştur.");
+
+        $send = $this->email->send();
+
+
+        if ($send){
+            echo "e posta gönderildi";
+        }else{
+            echo $this->email->print_debugger();
+        }
     }
 }

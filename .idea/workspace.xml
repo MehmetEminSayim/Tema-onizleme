@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4d178f20-ee46-4046-955e-e899c43e7f8d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/application/views/site/_master/form_m.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/site/_master/form_m.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/controllers/userop.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/controllers/userop.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/panel/application/views/site/_master/form_m2.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/site/_master/form_m2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/application/views/site/_master/uye_form_modal.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/site/_master/uye_form_modal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/application/views/site/component/user_order.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/site/component/user_order.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -118,6 +116,7 @@
       <workItem from="1572352150445" duration="511000" />
       <workItem from="1572352801659" duration="3399000" />
       <workItem from="1572362393468" duration="22938000" />
+      <workItem from="1572448901253" duration="3459000" />
     </task>
     <servers />
   </component>
