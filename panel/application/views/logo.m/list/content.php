@@ -2,7 +2,6 @@
 <div class="col-md-12">
     <h4 class="m-b-lg">
         Logo
-        <a href="<?php echo base_url("logo/new_form"); ?>" class="btn pull-right btn-primary btn-sm"><i class="fa fa-plus"></i> Yeni Ekle</a>
     </h4>
 </div>
 

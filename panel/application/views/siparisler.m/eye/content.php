@@ -24,7 +24,7 @@
                     <label>Ns Yönlendirme Alanı:</label>
                 <span><?php echo $item->ns_alanı; ?></span><br>
                     <label>Ödeme Türü:</label>
-                <span><?php echo $item->banka_bilgileri; ?></span><br>
+                <span><?php echo $item->odeme_tipi; ?></span><br>
                     <label>Sipariş Teması:</label>
                 <span><?php echo $item->tema; ?></span><br>
 

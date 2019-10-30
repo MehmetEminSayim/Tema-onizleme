@@ -28,7 +28,8 @@
             </div>
                 <button  class="btn btn-default">Giriş</button>
 
-                <button class=""><a href="<?php echo base_url('login') ?>"> Sifremi Unuttum </a></button>
+                <button style="width: 150px; height: 33px; border-radius: 5px; background-color: #8a6d3b; color: #0b0b0b"
+                ><a href="<?php echo base_url('login') ?>"> Sifremi Unuttum </a></button>
 
             </form>
 

@@ -90,7 +90,7 @@ class home extends CI_Controller
 
         if ($this->basic_model->insert('kullanici_bilgileri',$odata)){
 
-            /**
+
             try {
                $client = new SoapClient("http://soap.netgsm.com.tr:8080/Sms_webservis/SMS?wsdl");
 
@@ -115,7 +115,7 @@ class home extends CI_Controller
            {
                // Hata olusursa yakala
                echo "Soap Hatasi Olustu: " . $exc->getMessage();
-           }*/
+           }
 
             //mail göndericek...
             $config = array(
@@ -128,13 +128,13 @@ class home extends CI_Controller
                 "charset"    => "utf-8",
                 "mailtype"   => "html",
                 "wordwrap"   => true,
-                "newline"    => "\r\n"
+                "newline"    => "\r\n",
             );
             $this->load->library("email",$config);
             $this->email->from($mailayar->mail, "FBAR");
             $this->email->to($user->email);
-            $this->email->subject($mailayar->sender_name);
-            $this->email->message("Üyeliginiz Aktif Hale Gelmiştir.");
+            $this->email->subject("Fbar Bilgilendirme");
+            $this->email->message($mailayar->sender_name);
 
             $this->email->send();
 

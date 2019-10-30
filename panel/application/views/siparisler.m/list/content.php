@@ -26,7 +26,7 @@
                     <th>Telefon</th>
                     <th>Domain</th>
                     <th>Ns Alanı</th>
-                    <th>Banka Bilgileri</th>
+                    <th>Ödeme Bilgisi</th>
                     <th>Tema Adı</th>
                     <th>Sözleşme Kabul</th>
 
@@ -43,7 +43,7 @@
                             <td> <?php echo $item->telefon_no ; ?></td>
                             <td> <?php echo $item->domain ; ?></td>
                             <td> <?php echo $item->ns_alanı ; ?></td>
-                            <td> <?php echo $item->banka_bilgileri ; ?></td>
+                            <td> <?php echo $item->odeme_tipi ; ?></td>
                             <td> <?php echo $item->tema ; ?></td>
                             <td> <?php echo $item->sozlesme_kabul ; ?></td>
 

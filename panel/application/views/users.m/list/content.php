@@ -22,7 +22,7 @@
 
 
                     <th>#id</th>
-                    <th>Kullanıcı Adi</th>
+                    <th>Yetkisi</th>
                     <th>Ad Soyad</th>
                     <th>E-posta</th>
 
@@ -35,7 +35,7 @@
 
 
                             <td><?php echo $item->id; ?></td>
-                            <td> <?php echo $item->user_name; ?></td>
+                            <td> <?php echo $item->level; ?></td>
                             <td> <?php echo $item->full_name; ?></td>
                             <td><?php echo $item->email; ?></td>
 
