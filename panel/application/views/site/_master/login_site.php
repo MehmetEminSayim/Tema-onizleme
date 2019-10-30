@@ -27,8 +27,8 @@
 
             </div>
                 <button  class="btn btn-default">Giriş</button>
-                <button  type="button" data-toggle="modal" data-target="#ModalKayitForm" class="btn btn-default pull-right">Sifremi Unuttum</button>
 
+                <button class=""><a href="<?php echo base_url('login') ?>"> Sifremi Unuttum </a></button>
 
             </form>
 

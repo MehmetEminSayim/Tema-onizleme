@@ -110,6 +110,54 @@ class userop extends CI_Controller{
     }
 
     public function reset_password(){
-        echo "sıfırlandı";
+        $user = $this->basic_model->getRow('users', ['level' => 'user'])->email;
+
+        if ($user){
+
+            //mail göndericek...
+            $config = array(
+                "protocol"   => "smtp",
+                "smtp_host"  => "ssl://srvc84.turhost.com",
+                "smtp_port"  => "465",
+                "smtp_user"  => "dev@ratingacademy.com.tr",
+                "smtp_pass"  => "rating.17@",
+                "starttls"   => true,
+                "charset"    => "utf-8",
+                "mailtype"   => "html",
+                "wordwrap"   => true,
+                "newline"    => "\r\n"
+            );
+            $this->load->library("email",$config);
+            $this->email->from("dev@ratingacademy.com.tr", "fbar");
+            $this->email->to("mehmin3589@gmail.com");
+            $this->email->subject("Fbar bilgilendirme");
+            $this->email->message("Sifremi Sıfırlamayı Aktif Et.");
+
+            $send=$this->email->send();
+            if ($send){
+                $this->basic_model->update(
+                    array(
+                        "id" => $user->id
+                    ),
+                    array(
+                        "pasword" => md5("pasword")
+                    )
+                );
+                redirect(base_url('login'));
+            }
+            else{
+                echo $this->email->print_debugger();
+            }
+
+        }else{
+            // flasdata gelicek
+            //redirect(base_url(""));
+        }
+
+
+
+
+
+
     }
 }
