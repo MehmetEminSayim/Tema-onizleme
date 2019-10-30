@@ -2,7 +2,7 @@
     <div class="simple-page-logo animated swing">
         <a href="index.html">
             <span><i class="fa fa-gg"></i></span>
-            <span>Infinity</span>
+            <span>Fbar</span>
         </a>
     </div><!-- logo -->
     <div class="simple-page-form animated flipInY" id="reset-password-form">
@@ -10,7 +10,7 @@
 
         <form action="<?php echo base_url("sifremi-sifirla") ?>" method="post">
             <div class="form-group">
-                <input required id="reset-password-email" type="email" class="form-control" placeholder="email">
+                <input required name="gelen_mail" type="email" class="form-control" placeholder="E-posta">
             </div>
 
             <button class="btn btn-outline">Sifremi Sıfırla</button>

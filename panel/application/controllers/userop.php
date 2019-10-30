@@ -11,6 +11,7 @@ class userop extends CI_Controller{
         $this->viewFolder = "users.m";
         $this->load->model("users_model");
         $this->load->model("basic_model");
+        $this->load->helper("string");
     }
     public  function login(){
 
@@ -65,7 +66,7 @@ class userop extends CI_Controller{
     }
 
     public function send_mail(){
-        $mailayar = $this->basic_model->getRow('mail_ayar',['id' => 1]);
+        $mailayar = $this->basic_model->getRow('site_ayarlari',['id' => 0]);
 
         $config = array(
             "protocol"   => "smtp",
@@ -80,13 +81,12 @@ class userop extends CI_Controller{
             "newline"    => "\r\n"
         );
         $this->load->library("email",$config);
-        $this->email->from("xxxxx@gmail.com", $mailayar->sender_name);
+        $this->email->from($mailayar->mail, "FBAR");
         $this->email->to("mehmin3589@gmail.com");
-        $this->email->subject("Fbar bilgilendirme");
+        $this->email->subject($mailayar->sender_name);
         $this->email->message("Üyeliğiniz aktif olmuştur.");
 
         $send = $this->email->send();
-
 
         if ($send){
             echo "e posta gönderildi";
@@ -110,17 +110,21 @@ class userop extends CI_Controller{
     }
 
     public function reset_password(){
-        $user = $this->basic_model->getRow('users', ['level' => 'user'])->email;
 
+        $token = random_string('alnum', 16);
+        $user = $this->basic_model->getRow('users', ['email' => $_POST['gelen_mail']]);
         if ($user){
+
+            $alfa['token'] = $token;
+            $this->basic_model->update('users',$alfa,'id',$user->id);
 
             //mail göndericek...
             $config = array(
                 "protocol"   => "smtp",
-                "smtp_host"  => "ssl://srvc84.turhost.com",
-                "smtp_port"  => "465",
-                "smtp_user"  => "dev@ratingacademy.com.tr",
-                "smtp_pass"  => "rating.17@",
+                "smtp_host"  => $mailayar->host,
+                "smtp_port"  => $mailayar->port,
+                "smtp_user"  => $mailayar->mail,
+                "smtp_pass"  => $mailayar->password,
                 "starttls"   => true,
                 "charset"    => "utf-8",
                 "mailtype"   => "html",
@@ -128,36 +132,49 @@ class userop extends CI_Controller{
                 "newline"    => "\r\n"
             );
             $this->load->library("email",$config);
-            $this->email->from("dev@ratingacademy.com.tr", "fbar");
-            $this->email->to("mehmin3589@gmail.com");
-            $this->email->subject("Fbar bilgilendirme");
-            $this->email->message("Sifremi Sıfırlamayı Aktif Et.");
-
-            $send=$this->email->send();
-            if ($send){
-                $this->basic_model->update(
-                    array(
-                        "id" => $user->id
-                    ),
-                    array(
-                        "pasword" => md5("pasword")
-                    )
-                );
-                redirect(base_url('login'));
-            }
-            else{
-                echo $this->email->print_debugger();
-            }
+            $this->email->from($mailayar->mail, "FBAR");
+            $this->email->to($user->email);
+            $this->email->subject($mailayar->sender_name);
+            $this->email->message(
+                "Yeni şifre almak için tıklayınız . <a href=".base_url('userop/re_pw/'.$token).">Tıkalayınız</a><br>
+                eğer link çalışmıyor ise kopyalınız. ".base_url('userop/re_pw/').$token
+            );
+            $this->email->send();
 
         }else{
-            // flasdata gelicek
-            //redirect(base_url(""));
+            redirect(base_url("sifremi-unuttum"));
         }
 
+    }
 
+    function re_pw(){
+        $token = $this->uri->segment(3);
+        if ($token != null){
+            $user = $this->basic_model->getRow('users', ['token' => $token]);
+            if ($user){
+                $viewDate = new stdClass();
+                $viewDate->viewFolder = $this->viewFolder;
+                $viewDate->subViewFolder = "r_pw";
+                $viewDate->user = $user;
 
+                $this->load->view("{$viewDate->viewFolder}/{$viewDate->subViewFolder}/index.php", $viewDate);
+            }
+            else{
+                return false;
+            }
+        }
 
+    }
 
+    function re_pw_post(){
+        if ($_POST['pw1'] == $_POST['pw2']){
+            $alfa['pasword'] = md5($_POST['pw1']);
+            $alfa['token'] = random_string('alnum', 16);
+            $this->basic_model->update('users',$alfa,'id',$_POST['uid']);
+            redirect(base_url());
+        }else{
+            redirect($_SERVER['HTTP_REFERER']);
+        }
 
     }
 }

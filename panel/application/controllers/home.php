@@ -116,6 +116,28 @@ class home extends CI_Controller
                // Hata olusursa yakala
                echo "Soap Hatasi Olustu: " . $exc->getMessage();
            }*/
+
+            //mail göndericek...
+            $config = array(
+                "protocol"   => "smtp",
+                "smtp_host"  => $mailayar->host,
+                "smtp_port"  => $mailayar->port,
+                "smtp_user"  => $mailayar->mail,
+                "smtp_pass"  => $mailayar->password,
+                "starttls"   => true,
+                "charset"    => "utf-8",
+                "mailtype"   => "html",
+                "wordwrap"   => true,
+                "newline"    => "\r\n"
+            );
+            $this->load->library("email",$config);
+            $this->email->from($mailayar->mail, "FBAR");
+            $this->email->to($user->email);
+            $this->email->subject($mailayar->sender_name);
+            $this->email->message("Üyeliginiz Aktif Hale Gelmiştir.");
+
+            $this->email->send();
+
             $this->session->set_flashData('success','yes');
             $oturum = $this->basic_model->getTable('users',['id' => $userID],true);
             $sessionData = json_decode(json_encode($oturum), true);
