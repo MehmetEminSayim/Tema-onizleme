@@ -1,10 +1,10 @@
 <!-- Button trigger modal -->
-<span  data-toggle="modal" data-target="#exampleModal">
+<span  data-toggle="modal" data-target="#exampleModal2">
     <?php echo $this->basic_model->getRow('site_ayarlari',['id' => 0])->sozlesme_adi2 ?>
 </span>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content" style="color: #0b0b0b;">
             <div class="modal-header">

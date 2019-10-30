@@ -15,6 +15,7 @@
                 <li role="presentation" ><a href="#tab-1" aria-controls="tab-1" role="tab" data-toggle="tab">Site Bilgileri</a></li>
                 <li role="presentation"><a href="#tab-2"  aria-controls="tab-2" role="tab" data-toggle="tab">Sözleşme Ekle</a></li>
                 <li role="presentation"><a href="#tab-3"  aria-controls="tab-3" role="tab" data-toggle="tab">Banka Hesap Bilgileri</a></li>
+                <li role="presentation"><a href="#tab-4"  aria-controls="tab-4" role="tab" data-toggle="tab">Smtp Mail Gönderme</a></li>
             </ul><!-- .nav-tabs -->
 
 
@@ -150,6 +151,43 @@
                                 <textarea name="banka_bilgi" class="m-0" data-plugin="summernote" data-options="{height: 250}"></textarea>
                             </div>
                     </div><!-- .tab-content  -->
+
+                        <div role="tabpanel" class="tab-pane in active fade" id="tab-1">
+                            <h4 class="m-b-md">Smtp Mail Gönderme</h4>
+                            <div class="row ">
+
+                                <div class="form-group col-md-6">
+                                    <label>Host</label>
+                                    <input required class="form-control" id="exampleInputEmail1" placeholder="" name="host">
+                                </div>
+
+
+                                <div class="form-group col-md-6">
+                                    <label>Mail</label>
+                                    <input required class="form-control" id="exampleInputEmail1" placeholder="" name="mail">
+                                </div>
+                            </div>
+                            <div class="row" >
+
+                                <div class="form-group col-md-6" >
+                                    <label>Mail Sifre</label>
+                                    <input required class="form-control" id="exampleInputEmail1" placeholder="" name="password">
+                                </div>
+
+
+
+                                <div class="form-group col-md-6">
+                                    <label>Port</label>
+                                    <input required class="form-control" id="exampleInputEmail1" placeholder="" name="port">
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label>Gönderilecek Mesaj</label>
+                                    <input required class="form-control" id="exampleInputEmail1" placeholder="" name="sender_name">
+                                </div>
+                            </div>
+
+                        </div><!-- .tab-pane  -->
 
                     </div>
 

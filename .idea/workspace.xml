@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d178f20-ee46-4046-955e-e899c43e7f8d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/panel/application/views/users.m/forget_password/content.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/application/views/users.m/forget_password/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/application/views/users.m/forget_password/page_script.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/application/views/users.m/forget_password/page_style.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/application/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/config/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/controllers/ayarlar.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/controllers/ayarlar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/panel/application/controllers/userop.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/controllers/userop.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/views/ayarlar.m/add/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/ayarlar.m/add/content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/views/ayarlar.m/update/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/ayarlar.m/update/content.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/panel/application/views/site/_master/login_site.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/site/_master/login_site.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/panel/application/views/site/_master/uye_form_modal.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/site/_master/uye_form_modal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/application/views/users.m/login/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/users.m/login/content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/views/users.m/forget_password/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/users.m/forget_password/content.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +121,7 @@
       <workItem from="1572352150445" duration="511000" />
       <workItem from="1572352801659" duration="3399000" />
       <workItem from="1572362393468" duration="22938000" />
-      <workItem from="1572448901253" duration="5945000" />
+      <workItem from="1572448901253" duration="10278000" />
     </task>
     <servers />
   </component>
@@ -156,7 +154,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/panel/application/views/ayarlar.m/add/content.php</url>
-          <line>30</line>
+          <line>31</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>

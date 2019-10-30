@@ -61,6 +61,11 @@ class ayarlar extends CI_Controller
                     "sozlesme_adi3"          => $this->input->post("sozlesme_adi3"),
                     "sozlesme_aciklama3"     => $this->input->post("sozlesme_aciklama3"),
                     "banka_bilgi"           => $this->input->post("banka_bilgi"),
+                    "host"                  => $this->input->post("host"),
+                    "mail"                  => $this->input->post("mail"),
+                    "password"              => $this->input->post("password"),
+                    "port"                  => $this->input->post("port"),
+                    "sender_name"           => $this->input->post("sender_name"),
                 )
             );
 
@@ -106,6 +111,11 @@ class ayarlar extends CI_Controller
                 "sozlesme_adi3"          => $this->input->post("sozlesme_adi3"),
                 "sozlesme_aciklama3"     => $this->input->post("sozlesme_aciklama3"),
                 "banka_bilgi"           => $this->input->post("banka_bilgi"),
+                "host"                  => $this->input->post("host"),
+                "mail"                  => $this->input->post("mail"),
+                "password"              => $this->input->post("password"),
+                "port"                  => $this->input->post("port"),
+                "sender_name"           => $this->input->post("sender_name"),
 
             )
         );
