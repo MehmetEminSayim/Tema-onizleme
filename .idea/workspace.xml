@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d178f20-ee46-4046-955e-e899c43e7f8d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/panel/application/views/site/_master/modal_footer4.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/controllers/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/controllers/Admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/panel/application/controllers/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/controllers/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/application/views/logo.m/list/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/logo.m/list/content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/controllers/userop.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/controllers/userop.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/helpers/tools_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/helpers/tools_helper.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/panel/application/views/siparisler.m/eye/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/siparisler.m/eye/content.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/panel/application/views/siparisler.m/list/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/siparisler.m/list/content.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/application/views/site/_master/login_site.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/site/_master/login_site.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/application/views/users.m/list/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/users.m/list/content.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,23 +38,23 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/panel/application/views/users.m" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/panel/application/views/site/_master" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\falay\panel\application\views\users.m" />
-      <recent name="C:\xampp\htdocs\falay\panel\application\views\site\_master" />
-      <recent name="C:\xampp\htdocs\falay\panel\application\views" />
-      <recent name="C:\xampp\htdocs\falay\panel\application\models" />
-      <recent name="C:\xampp\htdocs\falay\panel\application\controllers" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\falay\panel\application\views" />
       <recent name="C:\xampp\htdocs\falay\panel\application\views\admin" />
       <recent name="C:\xampp\htdocs\falay\panel\application\views\site" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\falay\panel\application\views\site\_master" />
+      <recent name="C:\xampp\htdocs\falay\panel\application\views\users.m" />
+      <recent name="C:\xampp\htdocs\falay\panel\application\views" />
+      <recent name="C:\xampp\htdocs\falay\panel\application\models" />
+      <recent name="C:\xampp\htdocs\falay\panel\application\controllers" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -121,6 +122,13 @@
       <workItem from="1572352801659" duration="3399000" />
       <workItem from="1572362393468" duration="22938000" />
       <workItem from="1572448901253" duration="16587000" />
+      <workItem from="1572466326761" duration="226000" />
+      <workItem from="1572468929857" duration="867000" />
+      <workItem from="1572526193257" duration="2338000" />
+      <workItem from="1572528992659" duration="3391000" />
+      <workItem from="1572535769966" duration="928000" />
+      <workItem from="1572613888689" duration="67000" />
+      <workItem from="1572635508432" duration="281000" />
     </task>
     <servers />
   </component>
