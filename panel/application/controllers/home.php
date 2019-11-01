@@ -28,32 +28,25 @@ class home extends CI_Controller
 
         if ($this->basic_model->insert('kullanici_bilgileri',$data)){
 
-            /**
-            try {
-               $client = new SoapClient("http://soap.netgsm.com.tr:8080/Sms_webservis/SMS?wsdl");
+            $username = "08503041749"; //
+            $password = "Ct7354095"; //
 
-               $msg  = 'test message';
-               $gsm  = array($telno);
+            $url = "https://api.netgsm.com.tr/sms/send/get/?usercode=kullanicidiniz&password=sifreniz&gsmno=5530065886&message=testmesaji&msgheader=08503041749";
 
+            $ch = curl_init($url);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+            $http_response = curl_exec($ch);
+            $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
-               $Result = $client -> smsGonder1NV2(
-                   array(
-                       'username'=>'08503041749',
-                       'password' => 'Ct7354095',
-                       'header' => '5305011771',
-                       'msg' => 'TEST',
-                       'gsm' => $gsm,
-                       'filter' => '',
-                       'startdate'  => '',
-                       'stopdate'  => '',
-                       'encoding' => ''  )
-                        );
+            if ($http_code != 200) {
+                echo "$http_code $http_response\n";
+                return false;
+            }
+            $balanceInfo = $http_response;
+            echo "MesajID : $balanceInfo";
+            return $balanceInfo;
 
-           } catch (Exception $exc)
-           {
-               // Hata olusursa yakala
-               echo "Soap Hatasi Olustu: " . $exc->getMessage();
-           }*/
            $this->session->set_flashData('success','yes');
            redirect(base_url("home"));
        }
@@ -90,34 +83,26 @@ class home extends CI_Controller
 
         if ($this->basic_model->insert('kullanici_bilgileri',$odata)){
 
+            $username = "08503041749"; //
+            $password = "Ct7354095"; //
 
-            try {
-               $client = new SoapClient("http://soap.netgsm.com.tr:8080/Sms_webservis/SMS?wsdl");
+            $url = "https://api.netgsm.com.tr/sms/send/get/?usercode=kullanicidiniz&password=sifreniz&gsmno=5530065886&message=testmesaji&msgheader=08503041749";
 
-               $msg  = 'test message';
-               $gsm  = array($telno);
+            $ch = curl_init($url);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+            $http_response = curl_exec($ch);
+            $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
-
-               $Result = $client -> smsGonder1NV2(
-                   array(
-                       'username'=>'08503041749',
-                       'password' => 'Ct7354095',
-                       'header' => '5305011771',
-                       'msg' => 'TEST',
-                       'gsm' => $gsm,
-                       'filter' => '',
-                       'startdate'  => '',
-                       'stopdate'  => '',
-                       'encoding' => ''  )
-                        );
-
-           } catch (Exception $exc)
-           {
-               // Hata olusursa yakala
-               echo "Soap Hatasi Olustu: " . $exc->getMessage();
-           }
+            if ($http_code != 200) {
+                echo "$http_code $http_response\n";
+                return false;
+            }
+            $balanceInfo = $http_response;
+            echo "MesajID : $balanceInfo";
 
             //mail göndericek...
+            $mailayar = $this->basic_model->getRow('site_ayarlari',['id' => 0]);
             $config = array(
                 "protocol"   => "smtp",
                 "smtp_host"  => $mailayar->host,
