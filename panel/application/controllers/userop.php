@@ -111,6 +111,8 @@ class userop extends CI_Controller{
 
     public function reset_password(){
 
+        $mailayar = $this->basic_model->getRow('site_ayarlari',['id' => 0]);
+
         $token = random_string('alnum', 16);
         $user = $this->basic_model->getRow('users', ['email' => $_POST['gelen_mail']]);
         if ($user){
