@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d178f20-ee46-4046-955e-e899c43e7f8d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/panel/application/views/site/_master/modal_footer4.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/panel/application/views/site/_master/modal_footer5.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/application/controllers/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/controllers/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/controllers/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/controllers/admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/panel/application/controllers/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/controllers/home.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/panel/application/controllers/userop.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/controllers/userop.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/panel/application/helpers/tools_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/helpers/tools_helper.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/panel/application/views/siparisler.m/eye/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/siparisler.m/eye/content.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/panel/application/views/siparisler.m/list/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/siparisler.m/list/content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/views/site/_master/modal_footer4.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/application/views/site/live_preview.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/application/views/site/live_preview.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,17 +46,17 @@
     <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\falay\panel\application\views" />
-      <recent name="C:\xampp\htdocs\falay\panel\application\views\admin" />
-      <recent name="C:\xampp\htdocs\falay\panel\application\views\site" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\falay\panel\application\views\site\_master" />
       <recent name="C:\xampp\htdocs\falay\panel\application\views\users.m" />
       <recent name="C:\xampp\htdocs\falay\panel\application\views" />
       <recent name="C:\xampp\htdocs\falay\panel\application\models" />
       <recent name="C:\xampp\htdocs\falay\panel\application\controllers" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\falay\panel\application\views" />
+      <recent name="C:\xampp\htdocs\falay\panel\application\views\admin" />
+      <recent name="C:\xampp\htdocs\falay\panel\application\views\site" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -129,6 +131,9 @@
       <workItem from="1572535769966" duration="928000" />
       <workItem from="1572613888689" duration="67000" />
       <workItem from="1572635508432" duration="281000" />
+      <workItem from="1572639259782" duration="50000" />
+      <workItem from="1572706946273" duration="2000" />
+      <workItem from="1572707108353" duration="1300000" />
     </task>
     <servers />
   </component>
