@@ -78,7 +78,7 @@ if (!$redirect) :
         $current_theme_purchase_url = $theme['ddn'];
         $current_theme_fiyat = $theme['fiyat'];
         $current_theme_uniq = $theme['uniq'];
-        
+
         $theme_found = false;
     endif;
     ?>
