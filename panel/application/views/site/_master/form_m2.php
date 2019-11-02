@@ -35,7 +35,8 @@
 <div id="myModal2" class="modal">
     <!-- Modal content -->
     <div class="modal-content col-md-12" >
-        <span class="close">&times;</span>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
 
 
 
