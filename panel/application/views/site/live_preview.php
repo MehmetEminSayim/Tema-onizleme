@@ -171,17 +171,17 @@ if (!$redirect) :
 
 
 <div style="min-width: 10px">
-        <ul style="" class="col-md-2">
-            <li  id="theme_list"><a id="theme_select" href="#">
+        <ul class="col-md-4">
+            <li  id="theme_list"><a style="width: 400px;" id="theme_select" href="#">
                     <?php
                     if ($theme_found == false) : echo "Tema Seçiniz..."; else: echo $current_theme_name; endif; ?></a>
-                <ul class="temayazdir">
+                <ul style="width: 400px;" class="temayazdir">
                     <?php ?>
                     <?php
                     foreach ($theme_array as $i => $theme) :
                         echo '<li class="button_a">
-					<a href="#" rel="' . $theme['url'] . ',' . $theme['ddn'] . ','.$theme['id'].'">' .
-                            $_SESSION['currentthemename']= ucfirst($theme['id']) .' <span style="background:#'.$theme['type_color'].'">'.$theme['type'].'</span></a>';
+					<a href="#" style="width: 400px;" rel="' . $theme['url'] . ',' . $theme['ddn'] . ','.$theme['id'].'">' .
+                            $_SESSION['currentthemename']= ucfirst($theme['id']) .' </a>';
                         if(isset($theme['preview'])){
                             echo '<img width="500px;" height="300px"  alt="" class="preview" src="';
                             if(strpos($theme['preview'], 'http://') === false){
