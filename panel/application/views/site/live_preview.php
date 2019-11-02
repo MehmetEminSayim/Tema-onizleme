@@ -72,11 +72,14 @@ if (!$redirect) :
     endforeach;
 
     if ($theme_found == false) :
+        $current_theme_name = ucfirst($theme['id']);
+        $current_theme_url = $theme['url'];
+        $current_theme_img = $theme['preview'];
+        $current_theme_purchase_url = $theme['ddn'];
+        $current_theme_fiyat = $theme['fiyat'];
+        $current_theme_uniq = $theme['uniq'];
+        
         $theme_found = false;
-       /** $current_theme_name = $theme_array[0]['id'];
-        $current_theme_url = $theme_array[0]['url'];
-        $current_theme_purchase_url = $theme_array[0]['ddn'];
-        $theme_found = false;*/
     endif;
     ?>
 
@@ -227,6 +230,7 @@ if (!$redirect) :
                         Satın Al <?php echo $current_theme_fiyat ,'₺'?>
                     </a>
                 <?php else:?>
+            <li class="purchase" rel="<?php echo $current_theme_purchase_url; ?>">
                     <a data-toggle="modal" data-target="#myModal2">
                         <img src="<?php echo base_url('assest/site/')?>images/purchase.png" alt="Web Design Tunes Themes" >
                         Satın Al <?php echo '₺', $current_theme_fiyat?>
