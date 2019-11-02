@@ -1,7 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admin  extends CI_Controller {
+class admin
+    extends CI_Controller {
 
     public  $viewFolder="";
 
@@ -11,7 +12,7 @@ class Admin  extends CI_Controller {
         parent::__construct();
         $this->viewFolder="dasbordum.v";
         if ($this->session->userdata('level') != 'admin'){
-            redirect(base_url('home'));
+            redirect(base_url('kullanici_paneli'));
         }
     }
 
