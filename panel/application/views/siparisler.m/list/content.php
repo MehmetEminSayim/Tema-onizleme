@@ -22,23 +22,30 @@
 
                     <th>#id</th>
                     <th>Adı Soyadı</th>
+                    <th>E-posta</th>
                     <th>Telefon</th>
+                    <th>Domain</th>
+                    <th>Ns Alanı</th>
+                    <th>Ödeme Bilgisi</th>
                     <th>Tema Adı</th>
-                    <th>Sil</th>
-                    <th>Gör</th>
+                    <th>Sözleşme Kabul</th>
 
                     </thead>
                     <tbody>
 
                     <?php foreach ($this->basic_model->getTable('kullanici_bilgileri') as $item){?>
-                        <?php $user =  $this->basic_model->getRow('users',['id' => $item->satin_alan]) ?>
                         <tr>
 
 
                             <td><?php echo $item->id; ?></td>
-                            <td> <?php echo $user->full_name?> </td>
+                            <td> <?php echo $item->adi_soyadi; ?></td>
+                            <td> <?php echo $item->e_posta; ?></td>
                             <td> <?php echo $item->telefon_no ; ?></td>
+                            <td> <?php echo $item->domain ; ?></td>
+                            <td> <?php echo $item->ns_alanı ; ?></td>
+                            <td> <?php echo $item->odeme_tipi ; ?></td>
                             <td> <?php echo $item->tema ; ?></td>
+                            <td> <?php echo $item->sozlesme_kabul ; ?></td>
 
 
                             <td><a href="<?php echo base_url("siparis/delete/$item->id")?>" class="btn btn-sn btn danger "><i class="fa fa-pencil-square-o"></i> Sil</a></td>

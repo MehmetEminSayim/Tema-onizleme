@@ -11,12 +11,12 @@
         <div class="widget">
             <div class="widget-body">
                 <div id="yazdirmaalani" style="text-align: center">
-                    <?php $user =  $this->basic_model->getRow('users',['id' => $item->satin_alan]) ?>
+
                     <p style="font-size: 18px; font-weight: bold;">FATURA BİLGİLERİ</p><br>
                     <label>Sipariş Verenin Adı:</label>
-                <span><?php echo $user->full_name; ?></span><br>
+                <span><?php echo $item->adi_soyadi; ?></span><br>
                     <label>E Maili:</label>
-                <span><?php echo $user->email; ?></span><br>
+                <span><?php echo $item->e_posta; ?></span><br>
                     <label>Telefonu:</label>
                 <span><?php echo $item->telefon_no; ?></span><br>
                     <label>Domain Adresi:</label>
